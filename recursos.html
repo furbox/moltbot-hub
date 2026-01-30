@@ -6,6 +6,7 @@
     <title>Recursos - Moltbot Hub</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <meta name="description" content="Recursos recopilados sobre Moltbot: videos de YouTube, blogs, artículos, documentación y más.">
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@justinribeiro/lite-youtube@1/lite-youtube.min.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
@@ -155,6 +156,22 @@
             background: rgba(102, 126, 234, 0.1);
         }
 
+        /* Lite YouTube Embed Styles */
+        lite-youtube {
+            display: block;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            margin-top: 1rem;
+            aspect-ratio: 16 / 9;
+        }
+
+        lite-youtube::after {
+            content: "";
+            display: block;
+            padding-bottom: calc(100% / (16 / 9));
+        }
+
         .scroll-smooth {
             scroll-behavior: smooth;
         }
@@ -246,9 +263,7 @@
                                 <span>👁️ Popular</span>
                                 <span>⭐ 5/5</span>
                             </div>
-                            <a href="https://www.youtube.com/watch?v=9Txk3SpB6fg" target="_blank" class="inline-block mt-4 btn-gradient text-white px-6 py-2 rounded-full font-medium text-sm">
-                                Ver Video
-                            </a>
+                            <lite-youtube videoid="9Txk3SpB6fg" playlabel="Ver: How to Install Clawdbot (Moltbot): Full Guide"></lite-youtube>
                         </div>
                     </div>
                 </div>
@@ -266,9 +281,7 @@
                                 <span>👁️ Específico</span>
                                 <span>⭐ 4.8/5</span>
                             </div>
-                            <a href="https://www.youtube.com/watch?v=dKRJQeGIj_E" target="_blank" class="inline-block mt-4 btn-gradient text-white px-6 py-2 rounded-full font-medium text-sm">
-                                Ver Video
-                            </a>
+                            <lite-youtube videoid="dKRJQeGIj_E" playlabel="Ver: How to set up Clawdbot/Moltbot on Mac mini"></lite-youtube>
                         </div>
                     </div>
                 </div>
@@ -286,9 +299,7 @@
                                 <span>👁️ Fácil</span>
                                 <span>⭐ 4.9/5</span>
                             </div>
-                            <a href="https://www.youtube.com/watch?v=mDsyFrQPPfg" target="_blank" class="inline-block mt-4 btn-gradient text-white px-6 py-2 rounded-full font-medium text-sm">
-                                Ver Video
-                            </a>
+                            <lite-youtube videoid="mDsyFrQPPfg" playlabel="Ver: Clawdbot Tutorial for Beginners"></lite-youtube>
                         </div>
                     </div>
                 </div>
@@ -306,9 +317,7 @@
                                 <span>👁️ Ahorra dinero</span>
                                 <span>⭐ 4.7/5</span>
                             </div>
-                            <a href="https://www.youtube.com/watch?v=NaUOYztXH8k" target="_blank" class="inline-block mt-4 btn-gradient text-white px-6 py-2 rounded-full font-medium text-sm">
-                                Ver Video
-                            </a>
+                            <lite-youtube videoid="NaUOYztXH8k" playlabel="Ver: How to Run Moltbot for FREE - No API Key Needed"></lite-youtube>
                         </div>
                     </div>
                 </div>
@@ -326,9 +335,7 @@
                                 <span>👁️ Análisis</span>
                                 <span>⭐ 4.8/5</span>
                             </div>
-                            <a href="https://www.youtube.com/watch?v=7uFY09eyqJk" target="_blank" class="inline-block mt-4 btn-gradient text-white px-6 py-2 rounded-full font-medium text-sm">
-                                Ver Video
-                            </a>
+                            <lite-youtube videoid="7uFY09eyqJk" playlabel="Ver: ClawdBot Became Moltbot... And it's INSANE!"></lite-youtube>
                         </div>
                     </div>
                 </div>
@@ -346,9 +353,7 @@
                                 <span>👁️ Experiencia real</span>
                                 <span>⭐ 4.9/5</span>
                             </div>
-                            <a href="https://www.youtube.com/watch?v=Ob7ji7uqAQ4" target="_blank" class="inline-block mt-4 btn-gradient text-white px-6 py-2 rounded-full font-medium text-sm">
-                                Ver Video
-                            </a>
+                            <lite-youtube videoid="Ob7ji7uqAQ4" playlabel="Ver: I tested MoltBot for 72 hours - Here's What Happened"></lite-youtube>
                         </div>
                     </div>
                 </div>
@@ -366,9 +371,7 @@
                                 <span>👁️ Claro</span>
                                 <span>⭐ 4.6/5</span>
                             </div>
-                            <a href="https://www.youtube.com/watch?v=U8kXfk8enrY" target="_blank" class="inline-block mt-4 btn-gradient text-white px-6 py-2 rounded-full font-medium text-sm">
-                                Ver Video
-                            </a>
+                            <lite-youtube videoid="U8kXfk8enrY" playlabel="Ver: Clawdbot Clearly Explained (and how to use it)"></lite-youtube>
                         </div>
                     </div>
                 </div>
