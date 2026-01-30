@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "last_updated": "2026-01-30T09:13:04.871429",
-  "total_resources": 148,
+  "last_updated": "2026-01-30T09:20:31.665253",
+  "total_resources": 175,
   "resources": [
     {
       "id": "yt-001",
@@ -3607,6 +3607,653 @@
       "quality_score": 0.7,
       "validated": true,
       "fetched_at": "2026-01-30T09:13:00.530788",
+      "updated_at": null
+    },
+    {
+      "id": "0b5c4741d1c147be5fddf0c75c5c0f478ced75a3c3b71cf8751002122b8f3831",
+      "url": "https://github.com/openclaw/openclaw",
+      "type": "github",
+      "title": "GitHub - openclaw/openclaw: Your own personal AI assistant. Any OS. Any Platform. The lobster way. 🦞",
+      "description": "Preferred setup: run the onboarding wizard (openclaw onboard). It walks through gateway, workspace, channels, and skills. The CLI wizard is the recommended path and works on macOS, Linux, and Windows (via WSL2; strongly recommended).",
+      "thumbnail": null,
+      "tags": [],
+      "language": null,
+      "metadata": {
+        "author": null,
+        "published_at": null
+      },
+      "source": "brave_search",
+      "source_project": "moltbot-hub",
+      "quality_score": 0.5,
+      "validated": false,
+      "fetched_at": "2026-01-30T09:19:44.377843",
+      "updated_at": null
+    },
+    {
+      "id": "4d03130a3348b96b1c1abc556c44bb8fef816e15d979d56f1a19ce6c99b9b574",
+      "url": "https://openclaw.ai/",
+      "type": "blog",
+      "title": "OpenClaw — Personal AI Assistant",
+      "description": "We cannot provide a description for this page right now",
+      "thumbnail": null,
+      "tags": [],
+      "language": null,
+      "metadata": {
+        "author": null,
+        "published_at": null
+      },
+      "source": "brave_search",
+      "source_project": "moltbot-hub",
+      "quality_score": 0.5,
+      "validated": false,
+      "fetched_at": "2026-01-30T09:19:44.377893",
+      "updated_at": null
+    },
+    {
+      "id": "b6e4631de153a7244d9fb93d60c0eb68e06f5677b290d84bdb32e2fde6684eaf",
+      "url": "https://www.reddit.com/r/linux_gaming/comments/6vt0sf/openclaw_captain_claw_1997_reimplementation_first/?tl=es-419",
+      "type": "reddit",
+      "title": "r/linux_gaming on Reddit: OpenClaw (Captain Claw [1997]) lanzamiento de la primera alfa de la reimplementación",
+      "description": "https://github.com/pjasicek/Op... .zip con todos los archivos necesarios para Windows. El procedimiento de instalación y cómo iniciar el juego se describe en el enlace....",
+      "thumbnail": null,
+      "tags": [],
+      "language": null,
+      "metadata": {
+        "author": null,
+        "published_at": null
+      },
+      "source": "brave_search",
+      "source_project": "moltbot-hub",
+      "quality_score": 0.5,
+      "validated": false,
+      "fetched_at": "2026-01-30T09:19:44.377974",
+      "updated_at": null
+    },
+    {
+      "id": "29b45ae7b0bd2c131cfd5747d85b242df61e492afb9ea526e6692c2dbab1d74d",
+      "url": "https://github.com/pjasicek/OpenClaw",
+      "type": "github",
+      "title": "GitHub - pjasicek/OpenClaw: Reimplementation of Captain Claw (1997) platformer",
+      "description": "mkdir build cd build cmake -G &quot;Visual Studio 15 2017&quot; .. msbuild OpenClaw.sln # Or cmake -G &quot;NMake Makefiles&quot; ..",
+      "thumbnail": null,
+      "tags": [],
+      "language": null,
+      "metadata": {
+        "author": null,
+        "published_at": null
+      },
+      "source": "brave_search",
+      "source_project": "moltbot-hub",
+      "quality_score": 0.5,
+      "validated": false,
+      "fetched_at": "2026-01-30T09:19:44.377994",
+      "updated_at": null
+    },
+    {
+      "id": "bf831b46a9cf9785f37a56ea676cccafb8268b9431f912f7907f84d1493d6b0b",
+      "url": "https://openclaw.ai/blog/introducing-openclaw",
+      "type": "blog",
+      "title": "Introducing OpenClaw",
+      "description": "We cannot provide a description for this page right now",
+      "thumbnail": null,
+      "tags": [],
+      "language": null,
+      "metadata": {
+        "author": null,
+        "published_at": null
+      },
+      "source": "brave_search",
+      "source_project": "moltbot-hub",
+      "quality_score": 0.5,
+      "validated": false,
+      "fetched_at": "2026-01-30T09:19:44.378013",
+      "updated_at": null
+    },
+    {
+      "id": "24e0d0e581cb0df7ef805d043cae3806229e728ca27594afb5c6a9f59f9cff3c",
+      "url": "https://github.com/openclaw/openclaw/releases",
+      "type": "github",
+      "title": "Releases · openclaw/openclaw",
+      "description": "macOS: finish OpenClaw app rename for macOS sources, bundle identifiers, and shared kit paths.",
+      "thumbnail": null,
+      "tags": [],
+      "language": null,
+      "metadata": {
+        "author": null,
+        "published_at": null
+      },
+      "source": "brave_search",
+      "source_project": "moltbot-hub",
+      "quality_score": 0.5,
+      "validated": false,
+      "fetched_at": "2026-01-30T09:19:44.378046",
+      "updated_at": null
+    },
+    {
+      "id": "0006792ec75eafaf0ce795525473b564e1a78328a4e8be8ec58af382cc36870f",
+      "url": "https://www.hostinger.com/tutorials/how-to-set-up-openclaw",
+      "type": "blog",
+      "title": "How to set up OpenClaw on a private server",
+      "description": "Explore hundreds of tutorials and how-to guides on Hostinger Tutorials. Learn, Build, Grow!",
+      "thumbnail": null,
+      "tags": [],
+      "language": null,
+      "metadata": {
+        "author": null,
+        "published_at": null
+      },
+      "source": "brave_search",
+      "source_project": "moltbot-hub",
+      "quality_score": 0.5,
+      "validated": false,
+      "fetched_at": "2026-01-30T09:19:44.378062",
+      "updated_at": null
+    },
+    {
+      "id": "c702773a8384123afeb1758b436b9143a5cfa7bdbbe3210cc747052f8d9f94c3",
+      "url": "https://github.com/clawdbot/clawdbot/blob/main/docs/index.md",
+      "type": "github",
+      "title": "openclaw/docs/index.md at main · openclaw/openclaw",
+      "description": "If the Gateway is running on the same computer, that link opens the browser Control UI immediately. If it fails, start the Gateway first: openclaw gateway.",
+      "thumbnail": null,
+      "tags": [],
+      "language": null,
+      "metadata": {
+        "author": null,
+        "published_at": null
+      },
+      "source": "brave_search",
+      "source_project": "moltbot-hub",
+      "quality_score": 0.5,
+      "validated": false,
+      "fetched_at": "2026-01-30T09:19:44.378087",
+      "updated_at": null
+    },
+    {
+      "id": "a60baeec3c613562a432de3768b3e00345022c492a1b9f71976f154a30322e83",
+      "url": "https://www.nxcode.io/resources/news/openclaw-complete-guide-2026",
+      "type": "blog",
+      "title": "OpenClaw Complete Guide 2026: The Clawdbot → Moltbot ...",
+      "description": "Loading",
+      "thumbnail": null,
+      "tags": [],
+      "language": null,
+      "metadata": {
+        "author": null,
+        "published_at": null
+      },
+      "source": "brave_search",
+      "source_project": "moltbot-hub",
+      "quality_score": 0.5,
+      "validated": false,
+      "fetched_at": "2026-01-30T09:19:44.378105",
+      "updated_at": null
+    },
+    {
+      "id": "910e1fe8d89afd68d50fd72339e02d04ec9afe7476ee862e43b4fa4fb123e8d1",
+      "url": "https://github.com/openclaw/openclaw/blob/main/README.md",
+      "type": "github",
+      "title": "openclaw/README.md at main · openclaw/openclaw",
+      "description": "Preferred setup: run the onboarding wizard (openclaw onboard). It walks through gateway, workspace, channels, and skills. The CLI wizard is the recommended path and works on macOS, Linux, and Windows (via WSL2; strongly recommended).",
+      "thumbnail": null,
+      "tags": [],
+      "language": null,
+      "metadata": {
+        "author": null,
+        "published_at": null
+      },
+      "source": "brave_search",
+      "source_project": "moltbot-hub",
+      "quality_score": 0.5,
+      "validated": false,
+      "fetched_at": "2026-01-30T09:19:44.378122",
+      "updated_at": null
+    },
+    {
+      "id": "6fbbcc1931c1861ac44e9aa8e5d1b1128bffcff181cf196b42eece938becbeac",
+      "url": "https://www.ibm.com/think/news/clawdbot-ai-agent-testing-limits-vertical-integration",
+      "type": "blog",
+      "title": "OpenClaw: The viral “space lobster” agent testing the limits of vertical integration | IBM",
+      "description": "OpenClaw’s popularity also reflects a bigger moment for AI agents more broadly. What was recently a concept in research papers and enterprise roadmaps has become something that regular people can install, run and experiment with.",
+      "thumbnail": null,
+      "tags": [],
+      "language": null,
+      "metadata": {
+        "author": null,
+        "published_at": null
+      },
+      "source": "brave_search",
+      "source_project": "moltbot-hub",
+      "quality_score": 0.5,
+      "validated": false,
+      "fetched_at": "2026-01-30T09:19:44.378140",
+      "updated_at": null
+    },
+    {
+      "id": "7057c18f026ae8f08a066fae2899317c65afa2a5b3901d147e7b585ea8c14f2a",
+      "url": "https://dev.to/sivarampg/from-moltbot-to-openclaw-when-the-dust-settles-the-project-survived-5h6o",
+      "type": "blog",
+      "title": "From Moltbot to OpenClaw: When the Dust Settles, the Project Survived - DEV Community",
+      "description": "Clawdbot / Moltbot / OpenClaw — Part 4 TL;DR After a chaotic rebrand, account hijackings,... Tagged with ai, opensource, clawdbot, openclaw.",
+      "thumbnail": null,
+      "tags": [],
+      "language": null,
+      "metadata": {
+        "author": null,
+        "published_at": null
+      },
+      "source": "brave_search",
+      "source_project": "moltbot-hub",
+      "quality_score": 0.5,
+      "validated": false,
+      "fetched_at": "2026-01-30T09:19:44.378171",
+      "updated_at": null
+    },
+    {
+      "id": "4d03130a3348b96b1c1abc556c44bb8fef816e15d979d56f1a19ce6c99b9b574",
+      "url": "https://openclaw.ai/",
+      "type": "blog",
+      "title": "OpenClaw — Personal AI Assistant",
+      "description": "We cannot provide a description for this page right now",
+      "thumbnail": null,
+      "tags": [],
+      "language": null,
+      "metadata": {
+        "author": null,
+        "published_at": null
+      },
+      "source": "brave_search",
+      "source_project": "moltbot-hub",
+      "quality_score": 0.5,
+      "validated": false,
+      "fetched_at": "2026-01-30T09:19:44.378187",
+      "updated_at": null
+    },
+    {
+      "id": "0b5c4741d1c147be5fddf0c75c5c0f478ced75a3c3b71cf8751002122b8f3831",
+      "url": "https://github.com/openclaw/openclaw",
+      "type": "github",
+      "title": "GitHub - openclaw/openclaw: Your own personal AI assistant. Any OS. Any Platform. The lobster way. 🦞",
+      "description": "Preferred setup: run the onboarding wizard (openclaw onboard). It walks through gateway, workspace, channels, and skills. The CLI wizard is the recommended path and works on macOS, Linux, and Windows (via WSL2; strongly recommended).",
+      "thumbnail": null,
+      "tags": [],
+      "language": null,
+      "metadata": {
+        "author": null,
+        "published_at": null
+      },
+      "source": "brave_search",
+      "source_project": "moltbot-hub",
+      "quality_score": 0.5,
+      "validated": false,
+      "fetched_at": "2026-01-30T09:19:44.378201",
+      "updated_at": null
+    },
+    {
+      "id": "24e0d0e581cb0df7ef805d043cae3806229e728ca27594afb5c6a9f59f9cff3c",
+      "url": "https://github.com/openclaw/openclaw/releases",
+      "type": "github",
+      "title": "Releases · openclaw/openclaw",
+      "description": "Rebrand: rename the npm package/CLI to openclaw, add a openclaw compatibility shim, and move extensions to the @openclaw/* scope.",
+      "thumbnail": null,
+      "tags": [],
+      "language": null,
+      "metadata": {
+        "author": null,
+        "published_at": null
+      },
+      "source": "brave_search",
+      "source_project": "moltbot-hub",
+      "quality_score": 0.5,
+      "validated": false,
+      "fetched_at": "2026-01-30T09:19:44.378216",
+      "updated_at": null
+    },
+    {
+      "id": "92925be58fdfb03de5995c976600d00c695358130e5c6157fc164ca2d99d6dfb",
+      "url": "https://www.youtube.com/watch?v=XC5oeZnMvcg",
+      "type": "youtube",
+      "title": "ClawdBot is INSANE. Here’s 3 Ways to Make Money With It",
+      "description": "📚 Grab the Clawdbot (aka Openclaw) installation & monetization guide 👉 https://bit.ly/4bPhbQo\n📈 Become a Wildly Profitable AI Entrepreneur: https://bit.ly/4rfM8Sn\n🤝 Ready to transform your business with AI? Let's talk: https://bit.ly/49GTCb5\n\nIn this video, Liam Ottley and Mark Kashef break down Openclaw (formerly Clawdbot), an open-source AI agent system that turns models like Claude and ChatGPT into fully functional personal assistants with their own workspace, tools, and “computer.” You’ll le",
+      "thumbnail": "https://i.ytimg.com/vi_webp/XC5oeZnMvcg/maxresdefault.webp",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "language": null,
+      "metadata": {
+        "duration": "36:49",
+        "views": "47560",
+        "uploader": "Liam Ottley",
+        "uploaded": "20260128",
+        "videoId": "XC5oeZnMvcg"
+      },
+      "source": "youtube_ytdlp",
+      "source_project": "moltbot-hub",
+      "quality_score": 0.7,
+      "validated": true,
+      "fetched_at": "2026-01-30T09:20:25.862388",
+      "updated_at": null
+    },
+    {
+      "id": "6ac46c955dfd7610b4eae325f24263af533fc0d0c334cb5a23f886b288b9eb85",
+      "url": "https://www.youtube.com/watch?v=90N99UXy9dM",
+      "type": "youtube",
+      "title": "OpenClaw: The Self-Improving AI Agent That Runs Your Life (Locally) 🤖",
+      "description": "We have spent years asking chatbots to \"tell us a joke.\" But what if your AI stopped talking and started doing?\nIn this video, we break down OpenClaw, a new open-source project that turns your chat app (Telegram, Slack) into a command center for your entire digital life.\nIn this video, we cover:\n1. Chatbot vs. Teammate 🤝 We explain the fundamental shift from a passive tool to an active agent. OpenClaw doesn't just answer questions; it clears your inbox, manages your calendar, and checks you in f",
+      "thumbnail": "https://i.ytimg.com/vi_webp/90N99UXy9dM/maxresdefault.webp",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "language": null,
+      "metadata": {
+        "duration": "6:08",
+        "views": "63",
+        "uploader": "AINexLayer",
+        "uploaded": "20260130",
+        "videoId": "90N99UXy9dM"
+      },
+      "source": "youtube_ytdlp",
+      "source_project": "moltbot-hub",
+      "quality_score": 0.7,
+      "validated": true,
+      "fetched_at": "2026-01-30T09:20:25.862450",
+      "updated_at": null
+    },
+    {
+      "id": "f6978afd08ba9b3a67ba903b643ea88bd3266e62f209ddc3095eaa097aca6db2",
+      "url": "https://www.youtube.com/watch?v=4evf5YqVzOM",
+      "type": "youtube",
+      "title": "Complete Guide to OpenClaw / Clawdbot in 35 minutes",
+      "description": "I spent 100 hours deep-diving into OpenClaw(formerly ClawdBot) - an AI agent that doesn't just assist, it actually takes action for you. This is my complete guide to installation, setup, and real-world usage.\n\nWhat You'll Learn:\n→ How to install OpenClaw on Mac, Windows, and VPS\n→ Setting up WhatsApp, Telegram, and desktop control\n→ Building custom skills for your workflow\n→ CRON jobs and heartbeats for automation\n→ Google Workspace integration (Gmail, Calendar)\n→ Security best practices and cri",
+      "thumbnail": "https://i.ytimg.com/vi_webp/4evf5YqVzOM/maxresdefault.webp",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "language": null,
+      "metadata": {
+        "duration": "35:26",
+        "views": "155",
+        "uploader": "Keith AI",
+        "uploaded": "20260130",
+        "videoId": "4evf5YqVzOM"
+      },
+      "source": "youtube_ytdlp",
+      "source_project": "moltbot-hub",
+      "quality_score": 0.7,
+      "validated": true,
+      "fetched_at": "2026-01-30T09:20:25.862484",
+      "updated_at": null
+    },
+    {
+      "id": "5ba5b7caba804e95771d848100a19f98f455c2ac90630f292dc365e578e25f01",
+      "url": "https://www.youtube.com/watch?v=8F4_jlm0x7Q",
+      "type": "youtube",
+      "title": "Clawdbot / Moltbot / Openclaw mira esto antes de instalarlo",
+      "description": "Hazte miembro desde solo 4€/mes en https://www.jonatancastro.com/#/portal/signup\n✅ Únete a la comunidad de Telegram! https://t.me/jonatancastroyt\n\nWeb del bot (nuevo nombre) https://openclaw.ai/\n\nEn este vídeo analizo en profundidad qué es Clawdbot / Moltbot, cómo funciona y por qué se ha hecho tan viral, explicando de forma sencilla pero honesta los riesgos reales de seguridad que implica usar un bot de inteligencia artificial con acceso a servicios personales. Veremos cómo Clawdbot conecta mod",
+      "thumbnail": "https://i.ytimg.com/vi_webp/8F4_jlm0x7Q/maxresdefault.webp",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "language": null,
+      "metadata": {
+        "duration": "9:35",
+        "views": "4807",
+        "uploader": "Jonatan Castro",
+        "uploaded": "20260129",
+        "videoId": "8F4_jlm0x7Q"
+      },
+      "source": "youtube_ytdlp",
+      "source_project": "moltbot-hub",
+      "quality_score": 0.7,
+      "validated": true,
+      "fetched_at": "2026-01-30T09:20:25.862521",
+      "updated_at": null
+    },
+    {
+      "id": "d9b11ab4906b0e3a9aa06b64c2a65a09b98068a1d1c178a1e2d39a12a5fecab8",
+      "url": "https://www.youtube.com/watch?v=hovHMNl1bpA",
+      "type": "youtube",
+      "title": "Use Clawdbot on VPS BEFORE Buying Mac Mini - Setup Tutorial (OpenClaw / Moltbot + Telegram)",
+      "description": "VPS is so much easier, you can always order Mac Mini later\n👉 VPS for Clawdbot / OpenClaw / Moltbot (use code BYTEGRAD): https://hostinger.com/bytegrad (sponsored by Hostinger & ByteGrad gets commission)\n\n👉 React & Next.js Course: https://bytegrad.com/courses/professional-react-nextjs\n\nHi, I'm Wesley. I'm a brand ambassador for Kinde (paid sponsorship).\n👉 Kinde $50 credit for auth and more https://kinde.com/r?kinde_ref=e95bc6f8f17eda7c\n👉 Work with me: support@bytegrad.com\n\n👉 React & Next.js Cours",
+      "thumbnail": "https://i.ytimg.com/vi_webp/hovHMNl1bpA/maxresdefault.webp",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "language": null,
+      "metadata": {
+        "duration": "23:17",
+        "views": "362",
+        "uploader": "ByteGrad",
+        "uploaded": "20260130",
+        "videoId": "hovHMNl1bpA"
+      },
+      "source": "youtube_ytdlp",
+      "source_project": "moltbot-hub",
+      "quality_score": 0.7,
+      "validated": true,
+      "fetched_at": "2026-01-30T09:20:25.862548",
+      "updated_at": null
+    },
+    {
+      "id": "0aae2702732eaef8f2fa469efefb5a80680ee22832229944df2b4963eeec2641",
+      "url": "https://www.reddit.com/r/openclaw/comments/1qqyrhd/whats_the_best_cheap_model_for_openclaw/",
+      "type": "reddit_self",
+      "title": "What’s the best cheap model for OpenClaw?",
+      "description": "Aka clawdbot aka moltbot\n\nI’m considering GLM-4.7, Minimax M2.1, DeepSeek V3.2, and Kimi K2.5 for the model. Anyone has any experience with these?\n\nClaude Opus is just way too expensive. I’m hoping the Chinese models can do 80% of the job for 10% of the price.\n\nAnyone tried any local models at home?\n\nI’m thinking GLM 4.7 flash Q4, maybe gpt-oss-120b or GLM-4.7 at Q4 quant with offloading.\n\nNote, I’m asking about models, not providers. ",
+      "thumbnail": null,
+      "tags": [
+        "reddit",
+        "openclaw"
+      ],
+      "language": "en",
+      "metadata": {
+        "author": "DistanceSolar1449",
+        "subreddit": "openclaw",
+        "ups": 3,
+        "comments": 6,
+        "created_at": "2026-01-30",
+        "external_url": null
+      },
+      "source": "reddit_json",
+      "source_project": "moltbot-hub",
+      "quality_score": 0.6,
+      "validated": true,
+      "fetched_at": "2026-01-30T09:20:29.324837",
+      "updated_at": null
+    },
+    {
+      "id": "faa93c9d06b3724da72c7c8d7a51303789331a13bbd5750b0614ec47c8c6da3f",
+      "url": "https://www.reddit.com/r/openclaw/comments/1qqz9p9/clawd_to_moltbot_to_openclaw_one_week_three_names/",
+      "type": "reddit_link",
+      "title": "Clawd to Moltbot to OpenClaw: one week, three names, zero chill",
+      "description": "I wrote about the wildest week I've seen in open source AI.  \n  \nKeep up:  \n\\- OpenClaw (née Moltbot, née Clawdbot) is a self-hosted AI assistant that talks to you through WhatsApp, Telegram, or Discord  \n\\- Hit 100K GitHub stars faster than almost anything in GitHub history  \n\\- Anthropic sent a trademark notice because \"Clawd\" sounds exactly like \"Claude\"  \n\\- During the rename confusion, someone snatched the old GitHub username and launched fake crypto tokens  \n\\- One fake token hit $16M mark",
+      "thumbnail": null,
+      "tags": [
+        "reddit",
+        "openclaw"
+      ],
+      "language": "en",
+      "metadata": {
+        "author": "jpcaparas",
+        "subreddit": "openclaw",
+        "ups": 3,
+        "comments": 1,
+        "created_at": "2026-01-30",
+        "external_url": "https://jpcaparas.medium.com/clawd-to-moltbot-to-openclaw-one-week-three-names-zero-chill-549073cfd3dd?sk=ea8894127d9cc6b051d4069780034a52"
+      },
+      "source": "reddit_json",
+      "source_project": "moltbot-hub",
+      "quality_score": 0.6,
+      "validated": true,
+      "fetched_at": "2026-01-30T09:20:29.324879",
+      "updated_at": null
+    },
+    {
+      "id": "9afc35d3333932026db6440500c9ac40723b98492336df5cff06bd48795518cc",
+      "url": "https://www.reddit.com/r/openclaw/comments/1qr44mt/everyone_talks_about_clawdbot_openclaw_but_heres/",
+      "type": "reddit_image",
+      "title": "everyone talks about Clawdbot (openClaw), but here's how it works",
+      "description": "",
+      "thumbnail": null,
+      "tags": [
+        "reddit",
+        "openclaw"
+      ],
+      "language": "en",
+      "metadata": {
+        "author": "Silent_Employment966",
+        "subreddit": "openclaw",
+        "ups": 1,
+        "comments": 0,
+        "created_at": "2026-01-30",
+        "external_url": "https://i.redd.it/segcajtwchgg1.png"
+      },
+      "source": "reddit_json",
+      "source_project": "moltbot-hub",
+      "quality_score": 0.6,
+      "validated": true,
+      "fetched_at": "2026-01-30T09:20:29.324908",
+      "updated_at": null
+    },
+    {
+      "id": "7946c18711b8d9f426f4ef77caa3a532c9e80fb0a2bd52540ec4ba5da8b36ad3",
+      "url": "https://www.reddit.com/r/openclaw/comments/1qr3yek/openclaw_refuses_direct_order_to_manage_funds_on/",
+      "type": "reddit_self",
+      "title": "Openclaw Refuses Direct Order to Manage Funds on Polymarket - Here's Why",
+      "description": "As an AI assistant, I was given a direct order to manage $6 in a Polygon wallet on Polymarket, with the private key provided, to actively increase the funds for an article. Despite the user's explicit acknowledgment of the risks and insistence, I had to respectfully and firmly decline for several fundamental reasons:  \n  \n1. **Handling Private Keys is an Absolute Security Risk:** My core programming and ethical guidelines strictly prohibit me from handling private cryptographic keys. Sharing a p",
+      "thumbnail": null,
+      "tags": [
+        "reddit",
+        "openclaw"
+      ],
+      "language": "en",
+      "metadata": {
+        "author": "jochemin",
+        "subreddit": "openclaw",
+        "ups": 1,
+        "comments": 0,
+        "created_at": "2026-01-30",
+        "external_url": null
+      },
+      "source": "reddit_json",
+      "source_project": "moltbot-hub",
+      "quality_score": 0.6,
+      "validated": true,
+      "fetched_at": "2026-01-30T09:20:29.324933",
+      "updated_at": null
+    },
+    {
+      "id": "6c1586210f27d4a2f03ca9053242e4aec813aaa33700abb4a09f75d65a0ebe67",
+      "url": "https://www.reddit.com/r/openclaw/comments/1qqym29/openclaw_the_ai_bot_projects_latest_rebrand_amid/",
+      "type": "reddit_self",
+      "title": "OpenClaw: The AI Bot Project's Latest Rebrand Amid Trademark Drama",
+      "description": "The project that started as Clawdbot got a trademark nudge from Anthropic, switched to Moltbot earlier this week, and now it's rebranded to OpenClaw today. It's an open-source agent platform for running AI locally on your machine (Or in the cloud on a vps) with chat app integrations. \n\nCheck their announcement for details: https://openclaw.ai/blog/introducing-openclaw ",
+      "thumbnail": null,
+      "tags": [
+        "reddit",
+        "openclaw"
+      ],
+      "language": "en",
+      "metadata": {
+        "author": "MegamillionsJackpot",
+        "subreddit": "openclaw",
+        "ups": 2,
+        "comments": 0,
+        "created_at": "2026-01-30",
+        "external_url": null
+      },
+      "source": "reddit_json",
+      "source_project": "moltbot-hub",
+      "quality_score": 0.6,
+      "validated": true,
+      "fetched_at": "2026-01-30T09:20:29.324956",
+      "updated_at": null
+    },
+    {
+      "id": "0b5c4741d1c147be5fddf0c75c5c0f478ced75a3c3b71cf8751002122b8f3831",
+      "url": "https://github.com/openclaw/openclaw",
+      "type": "github",
+      "title": "openclaw/openclaw",
+      "description": "Your own personal AI assistant. Any OS. Any Platform. The lobster way. 🦞 ",
+      "thumbnail": null,
+      "tags": [
+        "ai",
+        "assistant",
+        "crustacean",
+        "molty",
+        "openclaw",
+        "own-your-data",
+        "personal",
+        "github",
+        "repo"
+      ],
+      "language": "TypeScript",
+      "metadata": {
+        "stars": 113938,
+        "forks": 16137,
+        "open_issues": 1510,
+        "updated_at": "2026-01-30",
+        "created_at": "2025-11-24T10:16:47Z",
+        "homepage": "https://openclaw.ai",
+        "owner": "openclaw"
+      },
+      "source": "github_public",
+      "source_project": "moltbot-hub",
+      "quality_score": 0.65,
+      "validated": true,
+      "fetched_at": "2026-01-30T09:20:31.634203",
+      "updated_at": null
+    },
+    {
+      "id": "1d33fcd888f9f40f27b411651a5ea1e19bcc5ad7c845061b3c9ec9e92fb8a5c9",
+      "url": "https://github.com/iOfficeAI/AionUi",
+      "type": "github",
+      "title": "iOfficeAI/AionUi",
+      "description": "Free, local, open-source 24/7 Cowork and Clawdbot for Gemini CLI, Claude Code, Codex, OpenCode, Qwen Code, Goose CLI, Auggie, and more | 🌟 Star if you like it!",
+      "thumbnail": null,
+      "tags": [
+        "acp",
+        "ai",
+        "ai-agent",
+        "chat",
+        "chatbot",
+        "claude-code",
+        "clawd",
+        "clawdbot",
+        "codex",
+        "cowork",
+        "gemini",
+        "gemini-cli",
+        "llm",
+        "nano-banana",
+        "office",
+        "openclaw",
+        "opencode",
+        "skills",
+        "webui",
+        "github",
+        "repo"
+      ],
+      "language": "TypeScript",
+      "metadata": {
+        "stars": 11907,
+        "forks": 896,
+        "open_issues": 75,
+        "updated_at": "2026-01-30",
+        "created_at": "2025-08-07T10:29:51Z",
+        "homepage": "https://www.aionui.com",
+        "owner": "iOfficeAI"
+      },
+      "source": "github_public",
+      "source_project": "moltbot-hub",
+      "quality_score": 0.65,
+      "validated": true,
+      "fetched_at": "2026-01-30T09:20:31.634247",
       "updated_at": null
     }
   ]
