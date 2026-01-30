@@ -25,7 +25,8 @@ function normalizeResource(resource) {
         'reddit_image': 'reddit',
         'github': 'github',
         'docs': 'blog',
-        'website': 'blog'
+        'website': 'blog',
+        'tweet': 'tweet'
     };
 
     const normalizedType = typeMap[resource.type] || resource.type;
@@ -64,7 +65,8 @@ function normalizeResource(resource) {
         'youtube': 'Video',
         'blog': 'Artículo',
         'reddit': 'Discusión',
-        'github': 'Repositorio'
+        'github': 'Repositorio',
+        'tweet': 'Tweet'
     };
 
     return {
@@ -157,7 +159,8 @@ function getTypeIcon(type) {
         'youtube': '📺',
         'blog': '📖',
         'reddit': '💬',
-        'github': '🐙'
+        'github': '🐙',
+        'tweet': '🐦'
     };
     return icons[type] || '📄';
 }
@@ -184,6 +187,11 @@ function getResourceStats(resource) {
     } else if (resource.type === 'github') {
         if (resource.stars) statsHTML += `<span>⭐ ${formatNumber(resource.stars)}</span>`;
         if (resource.forks) statsHTML += `<span>🍴 ${formatNumber(resource.forks)}</span>`;
+    } else if (resource.type === 'tweet') {
+        if (resource.likes) statsHTML += `<span>❤️ ${formatNumber(resource.likes)}</span>`;
+        if (resource.retweets) statsHTML += `<span>🔄 ${formatNumber(resource.retweets)}</span>`;
+        if (resource.replies) statsHTML += `<span>💬 ${formatNumber(resource.replies)}</span>`;
+        if (resource.author) statsHTML += `<span>👤 ${resource.author}</span>`;
     }
 
     statsHTML += '</div>';
@@ -196,7 +204,8 @@ function getButtonLabel(type) {
         'youtube': 'Ver Video',
         'blog': 'Leer Artículo',
         'reddit': 'Ver Discusión',
-        'github': 'Ver Repositorio'
+        'github': 'Ver Repositorio',
+        'tweet': 'Ver Tweet'
     };
     return labels[type] || 'Ver Recurso';
 }
@@ -207,7 +216,8 @@ function getResourceBadgeClass(type) {
         'youtube': 'youtube-badge',
         'blog': 'blog-badge',
         'reddit': 'reddit-badge',
-        'github': 'github-badge'
+        'github': 'github-badge',
+        'tweet': 'tweet-badge'
     };
     return classes[type] || 'bg-gray-500';
 }
