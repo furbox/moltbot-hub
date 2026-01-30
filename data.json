@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "last_updated": "2026-01-30T09:20:31.665253",
-  "total_resources": 175,
+  "last_updated": "2026-01-30T09:30:02.852276",
+  "total_resources": 179,
   "resources": [
     {
       "id": "yt-001",
@@ -4254,6 +4254,92 @@
       "quality_score": 0.65,
       "validated": true,
       "fetched_at": "2026-01-30T09:20:31.634247",
+      "updated_at": null
+    },
+    {
+      "id": "1dde856c7c9a17671d69bfc0c78da2a15cf811afa1fc8efc7e68d83dca2e9d18",
+      "url": "https://www.reddit.com/r/LocalLLM/comments/1qr0pom/clawdbot_moltbot_openclaw_the_fastest_triple/",
+      "type": "reddit",
+      "title": "r/LocalLLM on Reddit: Clawdbot → Moltbot → OpenClaw. The Fastest Triple Rebrand in Open Source History",
+      "description": "Yeah, Moltbot wasn’t cutting it.",
+      "thumbnail": null,
+      "tags": [],
+      "language": null,
+      "metadata": {
+        "author": null,
+        "published_at": null
+      },
+      "source": "brave_search",
+      "source_project": "moltbot-hub",
+      "quality_score": 0.5,
+      "validated": false,
+      "fetched_at": "2026-01-30T09:28:55.764609",
+      "updated_at": null
+    },
+    {
+      "id": "d4e7d83bde0ee7e50987d09612b9d7e2e18458f755a36b42e2a5de3a34818cff",
+      "url": "https://www.reddit.com/r/vibecoding/comments/1qr0d9o/clawdbot_moltbot_openclaw_the_fastest_triple/",
+      "type": "reddit",
+      "title": "r/vibecoding on Reddit: Clawdbot → Moltbot → OpenClaw. The Fastest Triple Rebrand in Open Source History",
+      "description": "OpenClawed on Monday 🤌 · Cursor, Antigravity, OpenCode, ClaudeCode... With so many tools emerging, how do you choose the right one for development? r/vibecoding • · r/vibecoding · fully give in to the vibes. forget that the code even exists. Weekly visitors ·",
+      "thumbnail": null,
+      "tags": [],
+      "language": null,
+      "metadata": {
+        "author": null,
+        "published_at": null
+      },
+      "source": "brave_search",
+      "source_project": "moltbot-hub",
+      "quality_score": 0.5,
+      "validated": false,
+      "fetched_at": "2026-01-30T09:28:55.764626",
+      "updated_at": null
+    },
+    {
+      "id": "52d0e9fb0cd7f06241b5f8a6718571ad2c1fc4c1d0979d073b1ca131a41153f5",
+      "url": "https://en.wikipedia.org/wiki/Moltbot",
+      "type": "blog",
+      "title": "OpenClaw - Wikipedia",
+      "description": "It gained widespread attention in early 2026 for enabling users to automate complex digital tasks across messaging platforms, applications, and online services. The software was originally released under the name Clawdbot before being renamed Moltbot following trademark concerns raised by ...",
+      "thumbnail": null,
+      "tags": [],
+      "language": null,
+      "metadata": {
+        "author": null,
+        "published_at": null
+      },
+      "source": "brave_search",
+      "source_project": "moltbot-hub",
+      "quality_score": 0.5,
+      "validated": false,
+      "fetched_at": "2026-01-30T09:28:55.764643",
+      "updated_at": null
+    },
+    {
+      "id": "94d2179d5bce4067b7a0392a62fd620cddfae1571b7c3e39db3edb01770f918b",
+      "url": "https://www.youtube.com/watch?v=qePhufA1hSE",
+      "type": "youtube",
+      "title": "I use Clawdbot (OpenClaw) on a Raspberry Pi - it's Crazy Good!",
+      "description": "One of the keys to using OpenClaw (AKA Clawdbot/Moltbot) is to install it on a machine that is running 24/7, so that your virtual assistant can work for you even when you sleep. The Raspberry Pi is a perfect computer for running 24/7, which means it is perfect for OpenClaw!\n---\n⭐ Please support my channel on Patreon!\nGet early access to videos, members-only content, behind-the-scenes updates, and join the Gary Explains Discord! Join here 👉  https://www.patreon.com/GaryExplains 🙌\n\nTwitter: https:",
+      "thumbnail": "https://i.ytimg.com/vi/qePhufA1hSE/maxresdefault.jpg",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "language": null,
+      "metadata": {
+        "duration": "16:53",
+        "views": "400",
+        "uploader": "Gary Explains",
+        "uploaded": "20260130",
+        "videoId": "qePhufA1hSE"
+      },
+      "source": "youtube_ytdlp",
+      "source_project": "moltbot-hub",
+      "quality_score": 0.7,
+      "validated": true,
+      "fetched_at": "2026-01-30T09:29:37.894942",
       "updated_at": null
     }
   ]
