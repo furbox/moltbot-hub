@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "last_updated": "2026-01-30T08:50:24.099530",
-  "total_resources": 134,
+  "last_updated": "2026-01-30T09:13:04.871429",
+  "total_resources": 148,
   "resources": [
     {
       "id": "yt-001",
@@ -3297,6 +3297,316 @@
       "quality_score": 0.5,
       "validated": false,
       "fetched_at": "2026-01-30T08:49:59.805552",
+      "updated_at": null
+    },
+    {
+      "id": "d8754712d66e5d1ad06647d3731b2bb38b28e5e682d98280d37e0cabf318f8ae",
+      "url": "https://www.reddit.com/r/selfhosted/comments/1qpjm1y/tutorial_instal%C3%A9_moltbot_asistente_ia_open_source/",
+      "type": "reddit",
+      "title": "r/selfhosted on Reddit: Tutorial: Instalé Moltbot (asistente IA open source) en mi VPS Debian - Guía paso a paso",
+      "description": "Tutorial: Instalé Moltbot (asistente IA open source) en mi VPS Debian - Guía paso a paso Llevo varios días usando Moltbot en mi servidor y decidí…",
+      "thumbnail": null,
+      "tags": [],
+      "language": null,
+      "metadata": {
+        "author": null,
+        "published_at": null
+      },
+      "source": "brave_search",
+      "source_project": "moltbot-hub",
+      "quality_score": 0.5,
+      "validated": false,
+      "fetched_at": "2026-01-30T09:12:37.174936",
+      "updated_at": null
+    },
+    {
+      "id": "c22cd27ee5a331828ace68ac5c406601b75656abaeb73eaaeb1d3ff0eae8742a",
+      "url": "https://www.xataka.com/basics/como-instalar-moltbot-antes-clawdbot-configurarlo-manera-sencilla-posible",
+      "type": "blog",
+      "title": "Cómo instalar Moltbot (antes Clawdbot) y configurarlo de la manera más sencilla posible",
+      "description": "Vamos a explicarte cómo instalar y configurar fácil y rápido Moltbot, antes conocido como Clawdbot. Este es un agente de IA, un bot que toma el control de tu...",
+      "thumbnail": null,
+      "tags": [],
+      "language": null,
+      "metadata": {
+        "author": null,
+        "published_at": null
+      },
+      "source": "brave_search",
+      "source_project": "moltbot-hub",
+      "quality_score": 0.5,
+      "validated": false,
+      "fetched_at": "2026-01-30T09:12:37.174990",
+      "updated_at": null
+    },
+    {
+      "id": "26b091a8baae41240cc637e7b74af3976bb9889cbc383b83a2ccd0ddcf440782",
+      "url": "https://www.qnap.com/la/how-to/tutorial/article/how-to-install-and-run-moltbot-formerly-clawdbot-on-qnap-ubuntu-linux-station",
+      "type": "blog",
+      "title": "Cómo instalar y ejecutar Moltbot (anteriormente Clawdbot) en QNAP Ubuntu Linux Station | QNAP (América Latina)",
+      "description": "Moltbot 24/7. Este ejemplo utiliza Ubuntu 24.04, pero también se pueden usar otras versiones de Ubuntu compatibles. Inicie sesión en QNAP QTS. Abrir App Center. Buscar e instalar Ubuntu Linux Station.",
+      "thumbnail": null,
+      "tags": [],
+      "language": null,
+      "metadata": {
+        "author": null,
+        "published_at": null
+      },
+      "source": "brave_search",
+      "source_project": "moltbot-hub",
+      "quality_score": 0.5,
+      "validated": false,
+      "fetched_at": "2026-01-30T09:12:37.175040",
+      "updated_at": null
+    },
+    {
+      "id": "b24436fd6d64651b3e48ae4b136892d80b2676716dda5a3b496c8b7f10c73e82",
+      "url": "https://www.jonhernandez.education/wp-content/uploads/2026/01/Guia-MOLTBOT.pdf",
+      "type": "blog",
+      "title": "GUÍA PASO A PASO PARA EMPEZAR CON MOLTBOT",
+      "description": "MOLTBOT · ÍNDICE · 1.Intro: qué es y para qué sirve · 2.Cómo proteger el servidor en la guía · 3.Proceso de instalación · 4.Ordenador local · 5.Instalación en VPS · 6.Seguridad en VPS: puntos clave a tener en cuenta · 7.Casos de uso. Ejemplos claros.",
+      "thumbnail": null,
+      "tags": [],
+      "language": null,
+      "metadata": {
+        "author": null,
+        "published_at": null
+      },
+      "source": "brave_search",
+      "source_project": "moltbot-hub",
+      "quality_score": 0.5,
+      "validated": false,
+      "fetched_at": "2026-01-30T09:12:37.175190",
+      "updated_at": null
+    },
+    {
+      "id": "af067e0665e5f6a89c30e96cc143d43ec36f803460f8d658c938f4b6a8975b89",
+      "url": "https://www.digitalocean.com/community/tutorials/how-to-run-moltbot",
+      "type": "blog",
+      "title": "How to Run MoltBot with DigitalOcean's One-Click Deploy | DigitalOcean",
+      "description": "Learn how to deploy and use Moltbot, an AI-powered chatbot framework, using DigitalOcean’s 1 Click Deploy Moltbot. Set up a complete chatbot solution with ea…",
+      "thumbnail": null,
+      "tags": [],
+      "language": null,
+      "metadata": {
+        "author": null,
+        "published_at": null
+      },
+      "source": "brave_search",
+      "source_project": "moltbot-hub",
+      "quality_score": 0.5,
+      "validated": false,
+      "fetched_at": "2026-01-30T09:12:37.175216",
+      "updated_at": null
+    },
+    {
+      "id": "79e87fe0d65cee9db584fca45d01d48a57f03ed3a31e603bf01f677bd8113947",
+      "url": "https://es.linkedin.com/posts/ctala_tutorial-completo-instalaci%C3%B3n-de-moltbot-activity-7422337407208939520-Ni_E",
+      "type": "blog",
+      "title": "Publicación de Cristian Tala Sánchez",
+      "description": "We cannot provide a description for this page right now",
+      "thumbnail": null,
+      "tags": [],
+      "language": null,
+      "metadata": {
+        "author": null,
+        "published_at": null
+      },
+      "source": "brave_search",
+      "source_project": "moltbot-hub",
+      "quality_score": 0.5,
+      "validated": false,
+      "fetched_at": "2026-01-30T09:12:37.175317",
+      "updated_at": null
+    },
+    {
+      "id": "df45f2cd26e9f950fcc0e4434fc06a697c76efacbd709d1c1cebb1866dfe192e",
+      "url": "https://www.npmjs.com/package/moltbot",
+      "type": "blog",
+      "title": "moltbot",
+      "description": "Easy package.json exports.. Latest version: 1.0.1, last published: 14 years ago. Start using package in your project by running `npm i package`. There are 280 other projects in the npm registry using package.",
+      "thumbnail": null,
+      "tags": [],
+      "language": null,
+      "metadata": {
+        "author": null,
+        "published_at": null
+      },
+      "source": "brave_search",
+      "source_project": "moltbot-hub",
+      "quality_score": 0.5,
+      "validated": false,
+      "fetched_at": "2026-01-30T09:12:37.175362",
+      "updated_at": null
+    },
+    {
+      "id": "4ef8631cabed09fbb472902355a0c28db837caa46f2e77690c64800e7c25b58c",
+      "url": "https://www.hostinger.com/support/how-to-install-clawdbot-on-hostinger-vps/",
+      "type": "blog",
+      "title": "How to Install Moltbot (Clawdbot) on Hostinger VPS",
+      "description": "Things you wish to know before starting your website · The features of Hostinger control panel",
+      "thumbnail": null,
+      "tags": [],
+      "language": null,
+      "metadata": {
+        "author": null,
+        "published_at": null
+      },
+      "source": "brave_search",
+      "source_project": "moltbot-hub",
+      "quality_score": 0.5,
+      "validated": false,
+      "fetched_at": "2026-01-30T09:12:37.175397",
+      "updated_at": null
+    },
+    {
+      "id": "c0bf66e48f241ac60765bd0dd1e2a66cdd76584b38216ddc7c350fa486c74d80",
+      "url": "https://docs.molt.bot/channels/whatsapp",
+      "type": "docs",
+      "title": "Whatsapp - Moltbot",
+      "description": "Run moltbot channels login to scan the QR code (Linked Devices). Start the gateway. Minimal config: ... Multiple WhatsApp accounts (multi-account) in one Gateway process.",
+      "thumbnail": null,
+      "tags": [],
+      "language": null,
+      "metadata": {
+        "author": null,
+        "published_at": null
+      },
+      "source": "brave_search",
+      "source_project": "moltbot-hub",
+      "quality_score": 0.5,
+      "validated": false,
+      "fetched_at": "2026-01-30T09:12:37.175444",
+      "updated_at": null
+    },
+    {
+      "id": "fdd88f9e3a045edd3e39a44af1ef759b93ae6a6acb5f011aa69b5bbc97538278",
+      "url": "https://www.youtube.com/watch?v=ld2-pMJOuwA",
+      "type": "youtube",
+      "title": "⚠️ Qué es ClawdBOT (ahora MoltBOT) es la IA de MODA y te explico por qué NO DEBES USARLA",
+      "description": "¿Es seguro usar ClawdBot (ahora MoltBot)? ⚠️ Descubre la verdad detrás de esta herramienta.\n\nEn este vídeo analizamos a fondo el fenómeno de ClawdBot, que recientemente ha cambiado su nombre a MoltBot. Aunque muchos lo presentan como la solución definitiva para potenciar modelos de IA, existen riesgos críticos de seguridad y privacidad que debes conocer antes de instalarlo en tu equipo o empresa.\n\nSi eres parte de mi Comunidad de IA o te dedicas profesionalmente al sector, este análisis es de vi",
+      "thumbnail": "https://i.ytimg.com/vi/ld2-pMJOuwA/maxresdefault.jpg",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "language": null,
+      "metadata": {
+        "duration": "24:12",
+        "views": "1532",
+        "uploader": "Pablo Martínez",
+        "uploaded": "20260129",
+        "videoId": "ld2-pMJOuwA"
+      },
+      "source": "youtube_ytdlp",
+      "source_project": "moltbot-hub",
+      "quality_score": 0.7,
+      "validated": true,
+      "fetched_at": "2026-01-30T09:13:00.530649",
+      "updated_at": null
+    },
+    {
+      "id": "62c733d2426ddfc4ddbc69086b1d321ea51c6f5812a8b97b350af6f4f6120f58",
+      "url": "https://www.youtube.com/watch?v=yLKuq6SpMfs",
+      "type": "youtube",
+      "title": "Clawdbot es una P*TA LOCURA: El asistente de IA que lo hace TODO 🦞😱",
+      "description": "Aquí tienes el descuento CyberGhost VPN: https://www.cyberghostvpn.com/InteligenciaArtificial\n\nDescarga la Guía paso a paso de Moltbot aquí: https://www.jonhernandez.education/guia-moltbot/\n\n¡Apúntate al Club de la IA! Grupo de WhatsApp conmigo y otros cientos de locos por la IA: https://clubdelaia.com/\n\n🔥 En el vídeo de hoy te presento a Clippy, mi nuevo asistente personal con IA, basado en Moltbot, el agente viral que puede manejar tu ordenador por ti. Puede crear documentos, hacer PowerPoints",
+      "thumbnail": "https://i.ytimg.com/vi/yLKuq6SpMfs/maxresdefault.jpg",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "language": null,
+      "metadata": {
+        "duration": "17:20",
+        "views": "93848",
+        "uploader": "Inteligencia Artificial",
+        "uploaded": "20260128",
+        "videoId": "yLKuq6SpMfs"
+      },
+      "source": "youtube_ytdlp",
+      "source_project": "moltbot-hub",
+      "quality_score": 0.7,
+      "validated": true,
+      "fetched_at": "2026-01-30T09:13:00.530702",
+      "updated_at": null
+    },
+    {
+      "id": "af9cce0f78752c41e72c3afb6ee3ab24500b5f4bc84e0f70e67f287643fb9ade",
+      "url": "https://www.youtube.com/watch?v=59GrCryltng",
+      "type": "youtube",
+      "title": "¿Qué es CLAWDBOT? ¡El Futuro de los ASISTENTES VIRTUALES!",
+      "description": "Clawdbot es el nuevo asistente virtual open-source con el que podemos gestionar toda nuestra información 24/7. Una herramienta potentísima que viene acompañada de ciertos riesgos que también debes conocer.\n\n🔴 Mi canal principal (DotCSV) https://www.youtube.com/c/dotcsv\n▶ Clawdbot: https://clawd.bot/\n\n-- ¡MÁS DOTCSV! ---\n\n📸 Instagram : https://www.instagram.com/dotcsv/\n💸 Patreon : https://www.patreon.com/dotcsv\n👾 Twitch!!! : https://www.twitch.tv/dotcsv\n🐥 Twitter : https://twitter.com/dotCSV\n\n-- ",
+      "thumbnail": "https://i.ytimg.com/vi/59GrCryltng/maxresdefault.jpg",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "language": null,
+      "metadata": {
+        "duration": "30:29",
+        "views": "172187",
+        "uploader": "Dot CSV Lab ",
+        "uploaded": "20260126",
+        "videoId": "59GrCryltng"
+      },
+      "source": "youtube_ytdlp",
+      "source_project": "moltbot-hub",
+      "quality_score": 0.7,
+      "validated": true,
+      "fetched_at": "2026-01-30T09:13:00.530737",
+      "updated_at": null
+    },
+    {
+      "id": "1f0624d670ea2815a7810ae2770466a2ce8299ee5e2abfdf196a3a3360407216",
+      "url": "https://www.youtube.com/watch?v=gYXRFI9i9IU",
+      "type": "youtube",
+      "title": "Te explico Clawdbot (Moltbot) en 5 minutos (sin hype)",
+      "description": "Clawdbot (Moltbot) está explotando en X y hay mucho hype… y también mucha confusión. \n\nTe explico qué es Moltbot (ex-Clawdbot), qué NO es, y si realmente puede ser el asistente de IA personal que todos estábamos esperando.\n\n⚠️ IMPORTANTE: Esto NO es Claude de Anthropic. Es Clawdbot, un proyecto open source independiente que ahora se llama Moltbot. \n\nLa diferencia clave con otros agentes: cuando le pides algo que no puede hacer, se crea sus propios \"brazos\" para lograrlo. Instala herramientas, co",
+      "thumbnail": "https://i.ytimg.com/vi_webp/gYXRFI9i9IU/maxresdefault.webp",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "language": null,
+      "metadata": {
+        "duration": "5:52",
+        "views": "8362",
+        "uploader": "Benjamín Cordero",
+        "uploaded": "20260128",
+        "videoId": "gYXRFI9i9IU"
+      },
+      "source": "youtube_ytdlp",
+      "source_project": "moltbot-hub",
+      "quality_score": 0.7,
+      "validated": true,
+      "fetched_at": "2026-01-30T09:13:00.530764",
+      "updated_at": null
+    },
+    {
+      "id": "dfb7ef32238bbb33d01111d718acf543e21f3ce3345b4d83ae6606f51fc8ffac",
+      "url": "https://www.youtube.com/watch?v=UDMI0Dfxluo",
+      "type": "youtube",
+      "title": "Ollama + Clawdbot/Moltbot is INSANE! (FREE Local AI Coding) 🤯",
+      "description": "Want to make money and save time with AI? Get AI Coaching, Support & Courses 👉 https://www.skool.com/ai-profit-lab-7462/about\n\nGet a FREE AI Course + 1000 NEW AI Agents + Video Notes  👉 https://www.skool.com/ai-seo-with-julian-goldie-1553/about\n\nWant to know how I make videos like these? Join the AI Profit Boardroom → https://www.skool.com/ai-profit-lab-7462/about\n\nGet a FREE AI SEO Strategy Session: https://go.juliangoldie.com/strategy-session?utm=julian\n\nSponsorship inquiries: \nhttps://docs.go",
+      "thumbnail": "https://i.ytimg.com/vi/UDMI0Dfxluo/maxresdefault.jpg",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "language": null,
+      "metadata": {
+        "duration": "9:02",
+        "views": "11109",
+        "uploader": "Julian Goldie SEO",
+        "uploaded": "20260127",
+        "videoId": "UDMI0Dfxluo"
+      },
+      "source": "youtube_ytdlp",
+      "source_project": "moltbot-hub",
+      "quality_score": 0.7,
+      "validated": true,
+      "fetched_at": "2026-01-30T09:13:00.530788",
       "updated_at": null
     }
   ]
