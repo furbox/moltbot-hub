@@ -172,6 +172,38 @@
             padding-bottom: calc(100% / (16 / 9));
         }
 
+        /* Fallback link styles */
+        .lite-youtube-fallback {
+            aspect-ratio: 16 / 9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 1em;
+            padding: 1em;
+            background-color: #000;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 12px;
+            margin-top: 1rem;
+        }
+
+        .lite-youtube-fallback::before {
+            display: block;
+            content: '';
+            border: solid transparent;
+            border-width: 2em 0 2em 3em;
+            border-left-color: #ff0000;
+        }
+
+        .lite-youtube-fallback:hover::before {
+            border-left-color: #fff;
+        }
+
+        .lite-youtube-fallback:focus {
+            outline: 2px solid #667eea;
+        }
+
         .scroll-smooth {
             scroll-behavior: smooth;
         }
@@ -263,7 +295,9 @@
                                 <span>👁️ Popular</span>
                                 <span>⭐ 5/5</span>
                             </div>
-                            <lite-youtube videoid="9Txk3SpB6fg" playlabel="Ver: How to Install Clawdbot (Moltbot): Full Guide"></lite-youtube>
+                            <lite-youtube videoid="9Txk3SpB6fg" videotitle="How to Install Clawdbot (Moltbot): Full Guide" videoplay="Ver Video">
+                                <a class="lite-youtube-fallback" href="https://www.youtube.com/watch?v=9Txk3SpB6fg" target="_blank">Ver en YouTube</a>
+                            </lite-youtube>
                         </div>
                     </div>
                 </div>
@@ -281,7 +315,9 @@
                                 <span>👁️ Específico</span>
                                 <span>⭐ 4.8/5</span>
                             </div>
-                            <lite-youtube videoid="dKRJQeGIj_E" playlabel="Ver: How to set up Clawdbot/Moltbot on Mac mini"></lite-youtube>
+                            <lite-youtube videoid="dKRJQeGIj_E" videotitle="How to set up Clawdbot/Moltbot on Mac mini" videoplay="Ver Video">
+                                <a class="lite-youtube-fallback" href="https://www.youtube.com/watch?v=dKRJQeGIj_E" target="_blank">Ver en YouTube</a>
+                            </lite-youtube>
                         </div>
                     </div>
                 </div>
@@ -299,7 +335,9 @@
                                 <span>👁️ Fácil</span>
                                 <span>⭐ 4.9/5</span>
                             </div>
-                            <lite-youtube videoid="mDsyFrQPPfg" playlabel="Ver: Clawdbot Tutorial for Beginners"></lite-youtube>
+                            <lite-youtube videoid="mDsyFrQPPfg" videotitle="Clawdbot Tutorial for Beginners" videoplay="Ver Video">
+                                <a class="lite-youtube-fallback" href="https://www.youtube.com/watch?v=mDsyFrQPPfg" target="_blank">Ver en YouTube</a>
+                            </lite-youtube>
                         </div>
                     </div>
                 </div>
@@ -317,7 +355,9 @@
                                 <span>👁️ Ahorra dinero</span>
                                 <span>⭐ 4.7/5</span>
                             </div>
-                            <lite-youtube videoid="NaUOYztXH8k" playlabel="Ver: How to Run Moltbot for FREE - No API Key Needed"></lite-youtube>
+                            <lite-youtube videoid="NaUOYztXH8k" videotitle="How to Run Moltbot for FREE - No API Key Needed" videoplay="Ver Video">
+                                <a class="lite-youtube-fallback" href="https://www.youtube.com/watch?v=NaUOYztXH8k" target="_blank">Ver en YouTube</a>
+                            </lite-youtube>
                         </div>
                     </div>
                 </div>
@@ -335,7 +375,9 @@
                                 <span>👁️ Análisis</span>
                                 <span>⭐ 4.8/5</span>
                             </div>
-                            <lite-youtube videoid="7uFY09eyqJk" playlabel="Ver: ClawdBot Became Moltbot... And it's INSANE!"></lite-youtube>
+                            <lite-youtube videoid="7uFY09eyqJk" videotitle="ClawdBot Became Moltbot... And it's INSANE!" videoplay="Ver Video">
+                                <a class="lite-youtube-fallback" href="https://www.youtube.com/watch?v=7uFY09eyqJk" target="_blank">Ver en YouTube</a>
+                            </lite-youtube>
                         </div>
                     </div>
                 </div>
@@ -353,7 +395,9 @@
                                 <span>👁️ Experiencia real</span>
                                 <span>⭐ 4.9/5</span>
                             </div>
-                            <lite-youtube videoid="Ob7ji7uqAQ4" playlabel="Ver: I tested MoltBot for 72 hours - Here's What Happened"></lite-youtube>
+                            <lite-youtube videoid="Ob7ji7uqAQ4" videotitle="I tested MoltBot for 72 hours - Here's What Happened" videoplay="Ver Video">
+                                <a class="lite-youtube-fallback" href="https://www.youtube.com/watch?v=Ob7ji7uqAQ4" target="_blank">Ver en YouTube</a>
+                            </lite-youtube>
                         </div>
                     </div>
                 </div>
@@ -371,7 +415,9 @@
                                 <span>👁️ Claro</span>
                                 <span>⭐ 4.6/5</span>
                             </div>
-                            <lite-youtube videoid="U8kXfk8enrY" playlabel="Ver: Clawdbot Clearly Explained (and how to use it)"></lite-youtube>
+                            <lite-youtube videoid="U8kXfk8enrY" videotitle="Clawdbot Clearly Explained (and how to use it)" videoplay="Ver Video">
+                                <a class="lite-youtube-fallback" href="https://www.youtube.com/watch?v=U8kXfk8enrY" target="_blank">Ver en YouTube</a>
+                            </lite-youtube>
                         </div>
                     </div>
                 </div>
