@@ -10,15 +10,85 @@ async function loadResources() {
     }
 }
 
+// Función para normalizar recursos del crawler al formato esperado
+function normalizeResource(resource) {
+    // Extraer metadata si existe
+    const metadata = resource.metadata || {};
+
+    // Mapear tipos
+    const typeMap = {
+        'youtube': 'youtube',
+        'blog': 'blog',
+        'reddit_link': 'reddit',
+        'reddit_self': 'reddit',
+        'reddit': 'reddit',
+        'reddit_image': 'reddit',
+        'github': 'github',
+        'docs': 'blog',
+        'website': 'blog'
+    };
+
+    const normalizedType = typeMap[resource.type] || resource.type;
+
+    // Extraer stats según el tipo
+    let stats = {
+        duration: null,
+        views: null,
+        rating: null,
+        stars: null,
+        forks: null,
+        upvotes: null,
+        comments: null,
+        members: null,
+        readTime: null
+    };
+
+    if (normalizedType === 'youtube') {
+        stats.duration = metadata.duration || resource.duration || null;
+        stats.views = metadata.views || resource.views || null;
+        stats.rating = metadata.rating || resource.rating || null;
+    } else if (normalizedType === 'github') {
+        stats.stars = metadata.stars || resource.stars || null;
+        stats.forks = metadata.forks || resource.forks || null;
+    } else if (normalizedType === 'reddit') {
+        stats.upvotes = metadata.upvotes || resource.upvotes || null;
+        stats.comments = metadata.comments || resource.comments || null;
+        stats.members = metadata.members || resource.members || null;
+    } else if (normalizedType === 'blog') {
+        stats.readTime = metadata.reading_time || resource.readTime || null;
+        stats.views = metadata.views || resource.views || null;
+    }
+
+    // Generar badge basado en el tipo
+    const badgeMap = {
+        'youtube': 'Video',
+        'blog': 'Artículo',
+        'reddit': 'Discusión',
+        'github': 'Repositorio'
+    };
+
+    return {
+        ...resource,
+        type: normalizedType,
+        badge: badgeMap[normalizedType] || 'Recurso',
+        badgeColor: normalizedType,
+        author: metadata.author || metadata.uploader || resource.author || 'Desconocido',
+        ...stats
+    };
+}
+
 // Función para renderizar recursos en el DOM
 function renderResources(resources, filter = 'all') {
     const container = document.getElementById('resourcesContainer');
     if (!container) return;
 
+    // Normalizar recursos
+    const normalizedResources = resources.map(r => normalizeResource(r));
+
     // Filtrar recursos si es necesario
     const filteredResources = filter === 'all'
-        ? resources
-        : resources.filter(resource => resource.type === filter);
+        ? normalizedResources
+        : normalizedResources.filter(resource => resource.type === filter);
 
     // Limpiar contenedor
     container.innerHTML = '';
@@ -97,35 +167,23 @@ function getResourceStats(resource) {
     let statsHTML = '<div class="flex items-center space-x-4 text-sm text-gray-500">';
 
     if (resource.type === 'youtube') {
-        statsHTML += `
-            <span>📺 ${resource.duration}</span>
-            <span>👁️ ${formatNumber(resource.views)}</span>
-            <span>⭐ ${resource.rating}/5</span>
-        `;
+        if (resource.duration) statsHTML += `<span>📺 ${resource.duration}</span>`;
+        if (resource.views) statsHTML += `<span>👁️ ${formatNumber(resource.views)}</span>`;
+        if (resource.rating) statsHTML += `<span>⭐ ${resource.rating}/5</span>`;
     } else if (resource.type === 'blog') {
-        statsHTML += `
-            <span>📖 ${resource.readTime}</span>
-            <span>👁️ ${formatNumber(resource.views)}</span>
-            <span>⭐ ${resource.rating}/5</span>
-        `;
+        if (resource.readTime) statsHTML += `<span>📖 ${resource.readTime} min</span>`;
+        if (resource.views) statsHTML += `<span>👁️ ${formatNumber(resource.views)}</span>`;
+        if (resource.rating) statsHTML += `<span>⭐ ${resource.rating}/5</span>`;
     } else if (resource.type === 'reddit') {
         if (resource.members) {
-            statsHTML += `
-                <span>👥 ${formatNumber(resource.members)} miembros</span>
-            `;
+            statsHTML += `<span>👥 ${formatNumber(resource.members)} miembros</span>`;
         } else {
-            statsHTML += `
-                <span>⬆️ ${formatNumber(resource.upvotes)}</span>
-                <span>💬 ${resource.comments}</span>
-            `;
+            if (resource.upvotes) statsHTML += `<span>⬆️ ${formatNumber(resource.upvotes)}</span>`;
+            if (resource.comments) statsHTML += `<span>💬 ${formatNumber(resource.comments)}</span>`;
         }
-        statsHTML += `<span>⭐ ${resource.rating}/5</span>`;
     } else if (resource.type === 'github') {
-        statsHTML += `
-            <span>⭐ ${formatNumber(resource.stars)}</span>
-            <span>🍴 ${formatNumber(resource.forks)}</span>
-            <span>⭐ ${resource.rating}/5</span>
-        `;
+        if (resource.stars) statsHTML += `<span>⭐ ${formatNumber(resource.stars)}</span>`;
+        if (resource.forks) statsHTML += `<span>🍴 ${formatNumber(resource.forks)}</span>`;
     }
 
     statsHTML += '</div>';
@@ -181,8 +239,8 @@ function searchResources(resources, searchTerm) {
     return resources.filter(resource => {
         const titleMatch = resource.title.toLowerCase().includes(term);
         const descMatch = resource.description.toLowerCase().includes(term);
-        const tagsMatch = resource.tags.some(tag => tag.toLowerCase().includes(term));
-        const authorMatch = resource.author.toLowerCase().includes(term);
+        const tagsMatch = resource.tags && resource.tags.some(tag => tag.toLowerCase().includes(term));
+        const authorMatch = resource.author && resource.author.toLowerCase().includes(term);
 
         return titleMatch || descMatch || tagsMatch || authorMatch;
     });
@@ -241,6 +299,8 @@ async function initializeResources() {
         return;
     }
 
+    console.log(`Loaded ${resources.length} resources from crawler`);
+
     // Inicializar filtros
     initializeFilters(resources);
 
@@ -249,8 +309,6 @@ async function initializeResources() {
 
     // Renderizar todos los recursos inicialmente
     renderResources(resources, 'all');
-
-    console.log(`Loaded ${resources.length} resources`);
 }
 
 // Ejecutar cuando el DOM esté listo
