@@ -8,54 +8,91 @@
     <meta name="description" content="Recursos recopilados sobre Moltbot: videos de YouTube, blogs, artículos, documentación y más.">
     <script type="module" src="https://cdn.jsdelivr.net/npm/@justinribeiro/lite-youtube@1/lite-youtube.min.js"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
         * {
             font-family: 'Inter', sans-serif;
         }
 
         body {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
             min-height: 100vh;
+            color: #ffffff;
         }
 
-        .glass {
-            background: rgba(255, 255, 255, 0.1);
+        /* Glass oscuro con buen contraste */
+        .glass-dark {
+            background: rgba(15, 12, 41, 0.85);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.08);
         }
 
+        /* Glass claro para cards */
         .glass-card {
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(255, 255, 255, 0.03);
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        .gradient-text {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        .glass-card:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(255, 255, 255, 0.15);
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Gradientes de texto */
+        .gradient-text-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
 
-        .gradient-text-warm {
+        .gradient-text-accent {
             background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
 
-        .btn-gradient {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        /* Navegación glass mejorada */
+        .nav-glass {
+            background: rgba(15, 12, 41, 0.9);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        /* Links con buen contraste */
+        .link-glow {
+            color: rgba(255, 255, 255, 0.7);
             transition: all 0.3s ease;
+        }
+
+        .link-glow:hover {
+            color: #667eea;
+            text-shadow: 0 0 20px rgba(102, 126, 234, 0.5);
+        }
+
+        .link-active {
+            color: #667eea;
+            border-bottom: 2px solid #667eea;
+        }
+
+        /* Botones */
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
             overflow: hidden;
         }
 
-        .btn-gradient::before {
+        .btn-primary::before {
             content: '';
             position: absolute;
             top: 0;
@@ -66,35 +103,92 @@
             transition: left 0.5s;
         }
 
-        .btn-gradient:hover::before {
+        .btn-primary:hover::before {
             left: 100%;
         }
 
-        .btn-gradient:hover {
+        .btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 40px rgba(102, 126, 234, 0.4);
+            box-shadow: 0 20px 40px rgba(102, 126, 234, 0.3);
         }
 
-        .card-hover {
+        /* Search input */
+        .search-input {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #ffffff;
             transition: all 0.3s ease;
         }
 
-        .card-hover:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        .search-input::placeholder {
+            color: rgba(255, 255, 255, 0.4);
         }
 
-        .pattern-bg {
-            background: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.05'%3E%3Cpath d='M40 40c0-5.523-4.477-10-10-10s-10 4.477-10 10 4.477 10 10 10 10-4.477 10-10zm0 20c0-5.523-4.477-10-10-10s-10 4.477-10 10 4.477 10 10 10 10-4.477 10-10z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        .search-input:focus {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+            outline: none;
         }
 
-        .nav-glass {
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        /* Filter buttons */
+        .filter-btn {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.7);
+            transition: all 0.3s ease;
         }
 
+        .filter-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .filter-btn.active {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-color: transparent;
+            color: #ffffff;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        /* Badges con buen contraste */
+        .badge {
+            color: #ffffff;
+            font-weight: 600;
+            font-size: 0.75rem;
+            padding: 0.375rem 0.75rem;
+            border-radius: 9999px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .badge-youtube {
+            background: linear-gradient(135deg, #ff0000 0%, #cc0000 100%);
+        }
+
+        .badge-blog {
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+        }
+
+        .badge-reddit {
+            background: linear-gradient(135deg, #ff4500 0%, #cc3700 100%);
+        }
+
+        .badge-github {
+            background: linear-gradient(135deg, #333333 0%, #1a1a1a 100%);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .badge-docs {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+        }
+
+        .badge-tweet {
+            background: linear-gradient(135deg, #1da1f2 0%, #0d8bd9 100%);
+        }
+
+        /* Resource card */
         .resource-card {
             position: relative;
             overflow: hidden;
@@ -106,77 +200,69 @@
             top: 0;
             left: 0;
             right: 0;
-            height: 4px;
+            height: 3px;
             background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
+            opacity: 0;
+            transition: opacity 0.3s ease;
         }
 
-        .youtube-badge {
-            background: linear-gradient(135deg, #ff0000 0%, #cc0000 100%);
+        .resource-card:hover::before {
+            opacity: 1;
         }
 
-        .blog-badge {
-            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
-        }
-
-        .reddit-badge {
-            background: linear-gradient(135deg, #ff4500 0%, #cc3700 100%);
-        }
-
-        .github-badge {
-            background: linear-gradient(135deg, #333 0%, #000 100%);
-        }
-
-        .tweet-badge {
-            background: linear-gradient(135deg, #1da1f2 0%, #0d8bd9 100%);
-        }
-
-        .footer-gradient {
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-        }
-
-        .search-input {
-            background: rgba(255, 255, 255, 0.9);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            transition: all 0.3s ease;
-        }
-
-        .search-input:focus {
-            background: rgba(255, 255, 255, 1);
-            border-color: #667eea;
-            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
-        }
-
-        .filter-btn {
-            transition: all 0.3s ease;
-        }
-
-        .filter-btn.active {
+        /* Stats */
+        .stat-value {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
-        .filter-btn:hover:not(.active) {
-            background: rgba(102, 126, 234, 0.1);
+        /* Background decoration */
+        .bg-gradient-radial {
+            background: radial-gradient(circle at 50% 0%, rgba(102, 126, 234, 0.15), transparent 70%);
         }
 
-        /* Lite YouTube Embed Styles */
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: rgba(102, 126, 234, 0.5);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(102, 126, 234, 0.7);
+        }
+
+        /* Loading skeleton */
+        .skeleton {
+            background: linear-gradient(90deg, rgba(255,255,255,0.03) 25%, rgba(255,255,255,0.08) 50%, rgba(255,255,255,0.03) 75%);
+            background-size: 200% 100%;
+            animation: shimmer 1.5s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+
+        /* Lite YouTube Embed */
         lite-youtube {
             display: block;
             border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
             margin-top: 1rem;
             aspect-ratio: 16 / 9;
         }
 
-        lite-youtube::after {
-            content: "";
-            display: block;
-            padding-bottom: calc(100% / (16 / 9));
-        }
-
-        /* Fallback link styles */
         .lite-youtube-fallback {
             aspect-ratio: 16 / 9;
             display: flex;
@@ -185,11 +271,18 @@
             flex-direction: column;
             gap: 1em;
             padding: 1em;
-            background-color: #000;
+            background: rgba(0, 0, 0, 0.5);
             color: #fff;
             text-decoration: none;
             border-radius: 12px;
             margin-top: 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .lite-youtube-fallback:hover {
+            background: rgba(102, 126, 234, 0.3);
+            border-color: #667eea;
         }
 
         .lite-youtube-fallback::before {
@@ -203,616 +296,363 @@
         .lite-youtube-fallback:hover::before {
             border-left-color: #fff;
         }
-
-        .lite-youtube-fallback:focus {
-            outline: 2px solid #667eea;
-        }
-
-        .scroll-smooth {
-            scroll-behavior: smooth;
-        }
     </style>
 </head>
 <body class="scroll-smooth">
+    <!-- Background decoration -->
+    <div class="fixed inset-0 bg-gradient-radial pointer-events-none"></div>
 
     <!-- Navigation -->
-    <nav class="nav-glass fixed w-full top-0 left-0 right-0 z-50">
+    <nav class="nav-glass fixed top-0 left-0 right-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <div class="flex items-center">
-                    <a href="index.html" class="text-2xl font-bold gradient-text hover:opacity-80 transition">🦞 Moltbot Hub</a>
-                </div>
+            <div class="flex items-center justify-between h-16">
+                <a href="index-moderno.html" class="flex items-center space-x-2">
+                    <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center">
+                        <span class="text-white font-bold text-sm">M</span>
+                    </div>
+                    <span class="text-white font-semibold text-lg">Moltbot Hub</span>
+                </a>
+
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="index.html#que-es" class="text-gray-700 hover:text-purple-600 transition font-medium">¿Qué es?</a>
-                    <a href="index.html#caracteristicas" class="text-gray-700 hover:text-purple-600 transition font-medium">Características</a>
-                    <a href="recursos.html" class="text-purple-600 font-medium border-b-2 border-purple-600 pb-1">Recursos</a>
-                    <a href="index.html#comunidad" class="text-gray-700 hover:text-purple-600 transition font-medium">Comunidad</a>
-                    <a href="index.html#contacto" class="btn-gradient text-white px-6 py-2 rounded-full font-medium hover:shadow-lg transition">Unirse</a>
+                    <a href="index-moderno.html#inicio" class="link-glow text-sm font-medium">Inicio</a>
+                    <a href="index-moderno.html#caracteristicas" class="link-glow text-sm font-medium">Características</a>
+                    <a href="recursos-moderno.html" class="link-active text-sm font-medium">Recursos</a>
+                    <a href="index-moderno.html#recursos" class="link-glow text-sm font-medium">Comunidad</a>
+                    <a href="index-moderno.html#recursos" class="btn-primary px-4 py-2 rounded-lg text-white text-sm font-medium">
+                        Explorar
+                    </a>
                 </div>
-                <!-- Mobile menu button -->
-                <div class="md:hidden">
-                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-purple-600 focus:outline-none">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                        </svg>
-                    </button>
-                </div>
+
+                <button id="mobile-menu-btn" class="md:hidden text-white p-2">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
             </div>
-            <!-- Mobile menu -->
-            <div id="mobile-menu" class="hidden md:hidden pb-4">
-                <div class="flex flex-col space-y-3">
-                    <a href="index.html#que-es" class="text-gray-700 hover:text-purple-600 transition font-medium">¿Qué es?</a>
-                    <a href="index.html#caracteristicas" class="text-gray-700 hover:text-purple-600 transition font-medium">Características</a>
-                    <a href="recursos.html" class="text-purple-600 font-medium border-b-2 border-purple-600 pb-1">Recursos</a>
-                    <a href="index.html#comunidad" class="text-gray-700 hover:text-purple-600 transition font-medium">Comunidad</a>
-                    <a href="index.html#contacto" class="btn-gradient text-white px-6 py-2 rounded-full font-medium text-center">Unirse</a>
-                </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden glass-dark">
+            <div class="px-4 py-4 space-y-3">
+                <a href="index-moderno.html#inicio" class="block link-glow text-sm font-medium py-2">Inicio</a>
+                <a href="index-moderno.html#caracteristicas" class="block link-glow text-sm font-medium py-2">Características</a>
+                <a href="recursos-moderno.html" class="block link-active text-sm font-medium py-2">Recursos</a>
+                <a href="index-moderno.html#recursos" class="block link-glow text-sm font-medium py-2">Comunidad</a>
+                <a href="index-moderno.html#recursos" class="block btn-primary px-4 py-2 rounded-lg text-white text-sm font-medium text-center">
+                    Explorar
+                </a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="bg-gradient-to-br from-purple-600 via-pink-500 to-red-500 text-white pt-32 pb-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section class="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
             <div class="text-center">
-                <h1 class="text-5xl md:text-6xl font-bold mb-6">Recursos de Moltbot</h1>
-                <p class="text-2xl mb-4 opacity-90">Videos, blogs, documentación y más</p>
-                <p class="text-lg opacity-80 max-w-2xl mx-auto">Todo lo que necesitas para dominar Moltbot, organizado y categorizado para ti</p>
+                <div class="inline-flex items-center px-4 py-2 rounded-full glass-card mb-6">
+                    <span class="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></span>
+                    <span class="text-sm text-gray-300">179+ Recursos Organizados</span>
+                </div>
+
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-black mb-6 leading-tight">
+                    <span class="gradient-text-primary">Recursos de</span>
+                    <br>
+                    <span class="text-white">Moltbot</span>
+                </h1>
+
+                <p class="text-xl md:text-2xl text-gray-300 mb-4 max-w-3xl mx-auto">
+                    Videos, blogs, documentación y más
+                </p>
+
+                <p class="text-lg text-gray-400 max-w-2xl mx-auto">
+                    Todo lo que necesitas para dominar Moltbot, organizado y categorizado para ti
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-8 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="glass-card rounded-2xl p-6 md:p-8">
+                <div class="grid grid-cols-2 md:grid-cols-5 gap-6 text-center">
+                    <div>
+                        <p class="stat-value text-3xl md:text-4xl font-black mb-1" id="totalResources">179+</p>
+                        <p class="text-gray-400 text-sm font-medium">Total</p>
+                    </div>
+                    <div>
+                        <p class="stat-value text-3xl md:text-4xl font-black mb-1" id="youtubeCount">57</p>
+                        <p class="text-gray-400 text-sm font-medium">YouTube</p>
+                    </div>
+                    <div>
+                        <p class="stat-value text-3xl md:text-4xl font-black mb-1" id="blogCount">41</p>
+                        <p class="text-gray-400 text-sm font-medium">Blogs</p>
+                    </div>
+                    <div>
+                        <p class="stat-value text-3xl md:text-4xl font-black mb-1" id="redditCount">40</p>
+                        <p class="text-gray-400 text-sm font-medium">Reddit</p>
+                    </div>
+                    <div>
+                        <p class="stat-value text-3xl md:text-4xl font-black mb-1" id="githubCount">32</p>
+                        <p class="text-gray-400 text-sm font-medium">GitHub</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Search and Filter Section -->
-    <section class="py-12 pattern-bg">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="glass-card p-8 rounded-2xl mb-8">
+    <section class="py-8 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="glass-card p-6 md:p-8 rounded-2xl">
                 <div class="mb-6">
-                    <input type="text" id="searchInput" placeholder="🔍 Buscar recursos..." class="search-input w-full px-6 py-4 rounded-xl text-lg focus:outline-none">
+                    <input 
+                        type="text" 
+                        id="searchInput" 
+                        placeholder="🔍 Buscar recursos por título, descripción o autor..." 
+                        class="search-input w-full px-6 py-4 rounded-xl text-lg"
+                    >
                 </div>
                 <div class="flex flex-wrap gap-3">
-                    <button class="filter-btn active px-6 py-2 rounded-full font-medium" data-filter="all">Todos</button>
-                    <button class="filter-btn px-6 py-2 rounded-full font-medium bg-gray-100" data-filter="youtube">YouTube</button>
-                    <button class="filter-btn px-6 py-2 rounded-full font-medium bg-gray-100" data-filter="blog">Blogs</button>
-                    <button class="filter-btn px-6 py-2 rounded-full font-medium bg-gray-100" data-filter="reddit">Reddit</button>
-                    <button class="filter-btn px-6 py-2 rounded-full font-medium bg-gray-100" data-filter="github">GitHub</button>
+                    <button class="filter-btn active px-6 py-2 rounded-full font-medium text-sm" data-filter="all">
+                        Todos (179)
+                    </button>
+                    <button class="filter-btn px-6 py-2 rounded-full font-medium text-sm" data-filter="youtube">
+                        📺 YouTube (57)
+                    </button>
+                    <button class="filter-btn px-6 py-2 rounded-full font-medium text-sm" data-filter="blog">
+                        📖 Blogs (41)
+                    </button>
+                    <button class="filter-btn px-6 py-2 rounded-full font-medium text-sm" data-filter="reddit">
+                        💬 Reddit (40)
+                    </button>
+                    <button class="filter-btn px-6 py-2 rounded-full font-medium text-sm" data-filter="github">
+                        🐙 GitHub (32)
+                    </button>
+                    <button class="filter-btn px-6 py-2 rounded-full font-medium text-sm" data-filter="docs">
+                        📚 Docs (8)
+                    </button>
+                    <button class="filter-btn px-6 py-2 rounded-full font-medium text-sm" data-filter="tweet">
+                        🐦 Tweets (1)
+                    </button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Resources Section -->
-    <section class="py-12 pattern-bg">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-2 gap-8" id="resourcesContainer">
-
-                <!-- YouTube Resources -->
-                <div class="resource-card glass-card p-8 rounded-2xl card-hover" data-category="youtube">
-                    <div class="flex items-start space-x-4 mb-4">
-                        <div class="youtube-badge text-white px-3 py-1 rounded-full text-sm font-bold flex-shrink-0">
-                            YouTube
-                        </div>
-                        <div class="flex-1">
-                            <h3 class="text-xl font-bold text-gray-800 mb-2">How to Install Clawdbot (Moltbot): Full Guide</h3>
-                            <p class="text-gray-600 mb-4">Guía completa para instalar Moltbot/Clawdbot. Configuración paso a paso desde cero.</p>
-                            <div class="flex items-center space-x-4 text-sm text-gray-500">
-                                <span>📺 Tutorial completo</span>
-                                <span>👁️ Popular</span>
-                                <span>⭐ 5/5</span>
-                            </div>
-                            <lite-youtube videoid="9Txk3SpB6fg" videotitle="How to Install Clawdbot (Moltbot): Full Guide" videoplay="Ver Video">
-                                <a class="lite-youtube-fallback" href="https://www.youtube.com/watch?v=9Txk3SpB6fg" target="_blank">Ver en YouTube</a>
-                            </lite-youtube>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="resource-card glass-card p-8 rounded-2xl card-hover" data-category="youtube">
-                    <div class="flex items-start space-x-4 mb-4">
-                        <div class="youtube-badge text-white px-3 py-1 rounded-full text-sm font-bold flex-shrink-0">
-                            YouTube
-                        </div>
-                        <div class="flex-1">
-                            <h3 class="text-xl font-bold text-gray-800 mb-2">How to set up Clawdbot/Moltbot on Mac mini</h3>
-                            <p class="text-gray-600 mb-4">Tutorial específico para Mac mini. Full setup tutorial con todas las configuraciones necesarias.</p>
-                            <div class="flex items-center space-x-4 text-sm text-gray-500">
-                                <span>📺 Mac mini</span>
-                                <span>👁️ Específico</span>
-                                <span>⭐ 4.8/5</span>
-                            </div>
-                            <lite-youtube videoid="dKRJQeGIj_E" videotitle="How to set up Clawdbot/Moltbot on Mac mini" videoplay="Ver Video">
-                                <a class="lite-youtube-fallback" href="https://www.youtube.com/watch?v=dKRJQeGIj_E" target="_blank">Ver en YouTube</a>
-                            </lite-youtube>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="resource-card glass-card p-8 rounded-2xl card-hover" data-category="youtube">
-                    <div class="flex items-start space-x-4 mb-4">
-                        <div class="youtube-badge text-white px-3 py-1 rounded-full text-sm font-bold flex-shrink-0">
-                            YouTube
-                        </div>
-                        <div class="flex-1">
-                            <h3 class="text-xl font-bold text-gray-800 mb-2">Moltbot: The Safe & Easy Way (Beginner Tutorial)</h3>
-                            <p class="text-gray-600 mb-4">Tutorial para principiantes. Enfoque seguro y fácil. Perfecto para empezar con Moltbot.</p>
-                            <div class="flex items-center space-x-4 text-sm text-gray-500">
-                                <span>📺 Principiantes</span>
-                                <span>👁️ Fácil</span>
-                                <span>⭐ 4.9/5</span>
-                            </div>
-                            <lite-youtube videoid="mDsyFrQPPfg" videotitle="Clawdbot Tutorial for Beginners" videoplay="Ver Video">
-                                <a class="lite-youtube-fallback" href="https://www.youtube.com/watch?v=mDsyFrQPPfg" target="_blank">Ver en YouTube</a>
-                            </lite-youtube>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="resource-card glass-card p-8 rounded-2xl card-hover" data-category="youtube">
-                    <div class="flex items-start space-x-4 mb-4">
-                        <div class="youtube-badge text-white px-3 py-1 rounded-full text-sm font-bold flex-shrink-0">
-                            YouTube
-                        </div>
-                        <div class="flex-1">
-                            <h3 class="text-xl font-bold text-gray-800 mb-2">How to Run Moltbot for FREE - No API Key Needed</h3>
-                            <p class="text-gray-600 mb-4">Ejecuta Moltbot sin pagar API key. Usa modelos gratuitos de AI. Ahorra dinero.</p>
-                            <div class="flex items-center space-x-4 text-sm text-gray-500">
-                                <span>📺 Gratis</span>
-                                <span>👁️ Ahorra dinero</span>
-                                <span>⭐ 4.7/5</span>
-                            </div>
-                            <lite-youtube videoid="NaUOYztXH8k" videotitle="How to Run Moltbot for FREE - No API Key Needed" videoplay="Ver Video">
-                                <a class="lite-youtube-fallback" href="https://www.youtube.com/watch?v=NaUOYztXH8k" target="_blank">Ver en YouTube</a>
-                            </lite-youtube>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="resource-card glass-card p-8 rounded-2xl card-hover" data-category="youtube">
-                    <div class="flex items-start space-x-4 mb-4">
-                        <div class="youtube-badge text-white px-3 py-1 rounded-full text-sm font-bold flex-shrink-0">
-                            YouTube
-                        </div>
-                        <div class="flex-1">
-                            <h3 class="text-xl font-bold text-gray-800 mb-2">ClawdBot Became Moltbot... And it's INSANE!</h3>
-                            <p class="text-gray-600 mb-4">Review completo de la transición Clawdbot → Moltbot. Nuevas características analizadas.</p>
-                            <div class="flex items-center space-x-4 text-sm text-gray-500">
-                                <span>📺 Review</span>
-                                <span>👁️ Análisis</span>
-                                <span>⭐ 4.8/5</span>
-                            </div>
-                            <lite-youtube videoid="7uFY09eyqJk" videotitle="ClawdBot Became Moltbot... And it's INSANE!" videoplay="Ver Video">
-                                <a class="lite-youtube-fallback" href="https://www.youtube.com/watch?v=7uFY09eyqJk" target="_blank">Ver en YouTube</a>
-                            </lite-youtube>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="resource-card glass-card p-8 rounded-2xl card-hover" data-category="youtube">
-                    <div class="flex items-start space-x-4 mb-4">
-                        <div class="youtube-badge text-white px-3 py-1 rounded-full text-sm font-bold flex-shrink-0">
-                            YouTube
-                        </div>
-                        <div class="flex-1">
-                            <h3 class="text-xl font-bold text-gray-800 mb-2">I tested MoltBot for 72 hours - Here's What Happened</h3>
-                            <p class="text-gray-600 mb-4">Review de 72 horas de uso real. Experiencia práctica completa con Moltbot.</p>
-                            <div class="flex items-center space-x-4 text-sm text-gray-500">
-                                <span>📺 72 horas</span>
-                                <span>👁️ Experiencia real</span>
-                                <span>⭐ 4.9/5</span>
-                            </div>
-                            <lite-youtube videoid="Ob7ji7uqAQ4" videotitle="I tested MoltBot for 72 hours - Here's What Happened" videoplay="Ver Video">
-                                <a class="lite-youtube-fallback" href="https://www.youtube.com/watch?v=Ob7ji7uqAQ4" target="_blank">Ver en YouTube</a>
-                            </lite-youtube>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="resource-card glass-card p-8 rounded-2xl card-hover" data-category="youtube">
-                    <div class="flex items-start space-x-4 mb-4">
-                        <div class="youtube-badge text-white px-3 py-1 rounded-full text-sm font-bold flex-shrink-0">
-                            YouTube
-                        </div>
-                        <div class="flex-1">
-                            <h3 class="text-xl font-bold text-gray-800 mb-2">Clawdbot Clearly Explained (and how to use it)</h3>
-                            <p class="text-gray-600 mb-4">Explicación clara y concisa de Moltbot/Clawdbot. Cómo usarlo paso a paso.</p>
-                            <div class="flex items-center space-x-4 text-sm text-gray-500">
-                                <span>📺 Explicación</span>
-                                <span>👁️ Claro</span>
-                                <span>⭐ 4.6/5</span>
-                            </div>
-                            <lite-youtube videoid="U8kXfk8enrY" videotitle="Clawdbot Clearly Explained (and how to use it)" videoplay="Ver Video">
-                                <a class="lite-youtube-fallback" href="https://www.youtube.com/watch?v=U8kXfk8enrY" target="_blank">Ver en YouTube</a>
-                            </lite-youtube>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Blog Resources -->
-                <div class="resource-card glass-card p-8 rounded-2xl card-hover" data-category="blog">
-                    <div class="flex items-start space-x-4 mb-4">
-                        <div class="blog-badge text-white px-3 py-1 rounded-full text-sm font-bold flex-shrink-0">
-                            DataCamp
-                        </div>
-                        <div class="flex-1">
-                            <h3 class="text-xl font-bold text-gray-800 mb-2">Moltbot (Clawdbot) Tutorial: Control Your PC from WhatsApp</h3>
-                            <p class="text-gray-600 mb-4">Tutorial completo de DataCamp. Controla tu PC desde WhatsApp con Moltbot. Explicación técnica detallada.</p>
-                            <div class="flex items-center space-x-4 text-sm text-gray-500">
-                                <span>📖 Tutorial completo</span>
-                                <span>👁️ DataCamp</span>
-                                <span>📅 Ene 2026</span>
-                            </div>
-                            <a href="https://www.datacamp.com/tutorial/moltbot-clawdbot-tutorial" target="_blank" class="inline-block mt-4 btn-gradient text-white px-6 py-2 rounded-full font-medium text-sm">
-                                Leer Tutorial
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="resource-card glass-card p-8 rounded-2xl card-hover" data-category="blog">
-                    <div class="flex items-start space-x-4 mb-4">
-                        <div class="blog-badge text-white px-3 py-1 rounded-full text-sm font-bold flex-shrink-0">
-                            DigitalOcean
-                        </div>
-                        <div class="flex-1">
-                            <h3 class="text-xl font-bold text-gray-800 mb-2">Moltbot Quickstart Guide</h3>
-                            <p class="text-gray-600 mb-4">Guía de inicio rápido de DigitalOcean. Deploy en droplets, configuración VPS y setup completo.</p>
-                            <div class="flex items-center space-x-4 text-sm text-gray-500">
-                                <span>📖 Quickstart</span>
-                                <span>👁️ DigitalOcean</span>
-                                <span>📅 Ene 2026</span>
-                            </div>
-                            <a href="https://www.digitalocean.com/community/tutorials/moltbot-quickstart-guide" target="_blank" class="inline-block mt-4 btn-gradient text-white px-6 py-2 rounded-full font-medium text-sm">
-                                Leer Guía
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="resource-card glass-card p-8 rounded-2xl card-hover" data-category="blog">
-                    <div class="flex items-start space-x-4 mb-4">
-                        <div class="blog-badge text-white px-3 py-1 rounded-full text-sm font-bold flex-shrink-0">
-                            DEV Community
-                        </div>
-                        <div class="flex-1">
-                            <h3 class="text-xl font-bold text-gray-800 mb-2">Moltbot: The Ultimate Personal AI Assistant Guide for 2026</h3>
-                            <p class="text-gray-600 mb-4">Guía definitiva 2026. Análisis completo de características, casos de uso y configuración avanzada.</p>
-                            <div class="flex items-center space-x-4 text-sm text-gray-500">
-                                <span>📖 Guía 2026</span>
-                                <span>👁️ DEV.to</span>
-                                <span>📅 Ene 2026</span>
-                            </div>
-                            <a href="https://dev.to/czmilo/moltbot-the-ultimate-personal-ai-assistant-guide-for-2026-d4e" target="_blank" class="inline-block mt-4 btn-gradient text-white px-6 py-2 rounded-full font-medium text-sm">
-                                Leer Guía
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="resource-card glass-card p-8 rounded-2xl card-hover" data-category="blog">
-                    <div class="flex items-start space-x-4 mb-4">
-                        <div class="blog-badge text-white px-3 py-1 rounded-full text-sm font-bold flex-shrink-0">
-                            Medium
-                        </div>
-                        <div class="flex-1">
-                            <h3 class="text-xl font-bold text-gray-800 mb-2">ClawdBot AI: Installation, Guide, Usage Tutorial, Tips & Tricks</h3>
-                            <p class="text-gray-600 mb-4">Guía completa de instalación. Casos de uso reales. Tips y tricks de expertos para Moltbot.</p>
-                            <div class="flex items-center space-x-4 text-sm text-gray-500">
-                                <span>📖 Completo</span>
-                                <span>👁️ Medium</span>
-                                <span>📅 Ene 2026</span>
-                            </div>
-                            <a href="https://medium.com/@gemQueenx/clawdbot-ai-installation-guide-usage-tutorial-real-world-use-cases-and-expert-tips-tricks-81fc03228a22" target="_blank" class="inline-block mt-4 btn-gradient text-white px-6 py-2 rounded-full font-medium text-sm">
-                                Leer Artículo
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="resource-card glass-card p-8 rounded-2xl card-hover" data-category="blog">
-                    <div class="flex items-start space-x-4 mb-4">
-                        <div class="blog-badge text-white px-3 py-1 rounded-full text-sm font-bold flex-shrink-0">
-                            DEV Community
-                        </div>
-                        <div class="flex-1">
-                            <h3 class="text-xl font-bold text-gray-800 mb-2">You Don't Need a Mac Mini to Run Clawdbot</h3>
-                            <p class="text-gray-600 mb-4">No necesitas Mac Mini. Cómo correr Moltbot en cualquier lado con Railway, VPS y más.</p>
-                            <div class="flex items-center space-x-4 text-sm text-gray-500">
-                                <span>📖 Alternativas</span>
-                                <span>👁️ DEV.to</span>
-                                <span>📅 Ene 2026</span>
-                            </div>
-                            <a href="https://dev.to/sivarampg/you-dont-need-a-mac-mini-to-run-clawdbot-heres-how-to-run-it-anywhere-217l" target="_blank" class="inline-block mt-4 btn-gradient text-white px-6 py-2 rounded-full font-medium text-sm">
-                                Leer Artículo
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="resource-card glass-card p-8 rounded-2xl card-hover" data-category="blog">
-                    <div class="flex items-start space-x-4 mb-4">
-                        <div class="blog-badge text-white px-3 py-1 rounded-full text-sm font-bold flex-shrink-0">
-                            Artificial Corner
-                        </div>
-                        <div class="flex-1">
-                            <h3 class="text-xl font-bold text-gray-800 mb-2">Clawdbot Is Taking The AI Community by Storm</h3>
-                            <p class="text-gray-600 mb-4">Por qué Moltbot está revolucionando la comunidad. Qué es y cómo usarlo correctamente.</p>
-                            <div class="flex items-center space-x-4 text-sm text-gray-500">
-                                <span>📖 Tendencia</span>
-                                <span>👁️ Medium</span>
-                                <span>📅 Ene 2026</span>
-                            </div>
-                            <a href="https://medium.com/artificial-corner/clawdbot-is-taking-the-ai-community-by-storm-heres-what-it-is-and-how-to-use-it-3c0f8dc5eebf" target="_blank" class="inline-block mt-4 btn-gradient text-white px-6 py-2 rounded-full font-medium text-sm">
-                                Leer Artículo
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Reddit Resources -->
-                <div class="resource-card glass-card p-8 rounded-2xl card-hover" data-category="reddit">
-                    <div class="flex items-start space-x-4 mb-4">
-                        <div class="reddit-badge text-white px-3 py-1 rounded-full text-sm font-bold flex-shrink-0">
-                            Reddit
-                        </div>
-                        <div class="flex-1">
-                            <h3 class="text-xl font-bold text-gray-800 mb-2">r/moltbot - Comunidad Principal</h3>
-                            <p class="text-gray-600 mb-4">Comunidad principal de Moltbot/Clawdbot. Discussions, soporte, experiencias y recursos.</p>
-                            <div class="flex items-center space-x-4 text-sm text-gray-500">
-                                <span>💬 12K+ miembros</span>
-                                <span>⬆️ Activo</span>
-                                <span>👥 Soporte 24/7</span>
-                            </div>
-                            <a href="https://www.reddit.com/r/moltbot/" target="_blank" class="inline-block mt-4 btn-gradient text-white px-6 py-2 rounded-full font-medium text-sm">
-                                Ver Comunidad
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="resource-card glass-card p-8 rounded-2xl card-hover" data-category="reddit">
-                    <div class="flex items-start space-x-4 mb-4">
-                        <div class="reddit-badge text-white px-3 py-1 rounded-full text-sm font-bold flex-shrink-0">
-                            Reddit
-                        </div>
-                        <div class="flex-1">
-                            <h3 class="text-xl font-bold text-gray-800 mb-2">r/MoltBotHub - Hub del Ecosistema</h3>
-                            <p class="text-gray-600 mb-4">Hub del ecosistema Moltbot. Recursos compartidos, skills, documentación y más.</p>
-                            <div class="flex items-center space-x-4 text-sm text-gray-500">
-                                <span>💬 Recursos</span>
-                                <span>⬆️ Curado</span>
-                                <span>👥 Ecosistema</span>
-                            </div>
-                            <a href="https://www.reddit.com/r/MoltBotHub/" target="_blank" class="inline-block mt-4 btn-gradient text-white px-6 py-2 rounded-full font-medium text-sm">
-                                Ver Hub
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="resource-card glass-card p-8 rounded-2xl card-hover" data-category="reddit">
-                    <div class="flex items-start space-x-4 mb-4">
-                        <div class="reddit-badge text-white px-3 py-1 rounded-full text-sm font-bold flex-shrink-0">
-                            Reddit
-                        </div>
-                        <div class="flex-1">
-                            <h3 class="text-xl font-bold text-gray-800 mb-2">10 MIN Ultimate Guide to Setup ClawdBot</h3>
-                            <p class="text-gray-600 mb-4">Guía de 10 minutos para setup. Configuración rápida de ClawdBot/Moltbot en tu máquina local.</p>
-                            <div class="flex items-center space-x-4 text-sm text-gray-500">
-                                <span>💬 10 min setup</span>
-                                <span>⬆️ Popular</span>
-                                <span>👥 r/vibecoding</span>
-                            </div>
-                            <a href="https://www.reddit.com/r/vibecoding/comments/1qnaruz/10_min_ultimate_guide_to_setup_clawdbot_your_24_x/" target="_blank" class="inline-block mt-4 btn-gradient text-white px-6 py-2 rounded-full font-medium text-sm">
-                                Ver Guía
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="resource-card glass-card p-8 rounded-2xl card-hover" data-category="reddit">
-                    <div class="flex items-start space-x-4 mb-4">
-                        <div class="reddit-badge text-white px-3 py-1 rounded-full text-sm font-bold flex-shrink-0">
-                            Reddit
-                        </div>
-                        <div class="flex-1">
-                            <h3 class="text-xl font-bold text-gray-800 mb-2">Moltbot is incredible, but I woke up to a $120 API bill</h3>
-                            <p class="text-gray-600 mb-4">Problema de factura API $120. Cómo solucionarlo y optimizar costos de Moltbot.</p>
-                            <div class="flex items-center space-x-4 text-sm text-gray-500">
-                                <span>💬 Costos API</span>
-                                <span>⬆️ Warning</span>
-                                <span>👥 r/LocalLLM</span>
-                            </div>
-                            <a href="https://www.reddit.com/r/LocalLLM/comments/1qoxoze/moltbot_clawdbot_is_incredible_but_i_woke_up_to_a/" target="_blank" class="inline-block mt-4 btn-gradient text-white px-6 py-2 rounded-full font-medium text-sm">
-                                Ver Solución
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="resource-card glass-card p-8 rounded-2xl card-hover" data-category="reddit">
-                    <div class="flex items-start space-x-4 mb-4">
-                        <div class="reddit-badge text-white px-3 py-1 rounded-full text-sm font-bold flex-shrink-0">
-                            Reddit
-                        </div>
-                        <div class="flex-1">
-                            <h3 class="text-xl font-bold text-gray-800 mb-2">I open-sourced a directory of 500+ skills for Moltbot</h3>
-                            <p class="text-gray-600 mb-4">Directorio de 500+ skills open source para Moltbot. Categorías, búsqueda y más.</p>
-                            <div class="flex items-center space-x-4 text-sm text-gray-500">
-                                <span>💬 500+ skills</span>
-                                <span>⬆️ Open source</span>
-                                <span>👥 r/SaaS</span>
-                            </div>
-                            <a href="https://www.reddit.com/r/SaaS/comments/1qpodoh/i_opensourced_a_directory_of_500_skills_for/" target="_blank" class="inline-block mt-4 btn-gradient text-white px-6 py-2 rounded-full font-medium text-sm">
-                                Ver Directorio
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- GitHub Resources -->
-                <div class="resource-card glass-card p-8 rounded-2xl card-hover" data-category="github">
-                    <div class="flex items-start space-x-4 mb-4">
-                        <div class="github-badge text-white px-3 py-1 rounded-full text-sm font-bold flex-shrink-0">
-                            GitHub
-                        </div>
-                        <div class="flex-1">
-                            <h3 class="text-xl font-bold text-gray-800 mb-2">moltbot/moltbot - Repositorio Principal</h3>
-                            <p class="text-gray-600 mb-4">Código fuente oficial de Moltbot. Documentación, issues, releases y contribuciones.</p>
-                            <div class="flex items-center space-x-4 text-sm text-gray-500">
-                                <span>⭐ Oficial</span>
-                                <span>🍴 Open source</span>
-                                <span>👥 Comunidad activa</span>
-                            </div>
-                            <a href="https://github.com/moltbot/moltbot" target="_blank" class="inline-block mt-4 btn-gradient text-white px-6 py-2 rounded-full font-medium text-sm">
-                                Ver Repositorio
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="resource-card glass-card p-8 rounded-2xl card-hover" data-category="github">
-                    <div class="flex items-start space-x-4 mb-4">
-                        <div class="github-badge text-white px-3 py-1 rounded-full text-sm font-bold flex-shrink-0">
-                            GitHub
-                        </div>
-                        <div class="flex-1">
-                            <h3 class="text-xl font-bold text-gray-800 mb-2">VoltAgent/awesome-moltbot-skills - 700+ Skills</h3>
-                            <p class="text-gray-600 mb-4">Colección de 700+ skills de la comunidad. Categorizados, curados y listos para usar.</p>
-                            <div class="flex items-center space-x-4 text-sm text-gray-500">
-                                <span>⭐ 700+ skills</span>
-                                <span>🍴 Comunidad</span>
-                                <span>👁️ Categorizados</span>
-                            </div>
-                            <a href="https://github.com/VoltAgent/awesome-moltbot-skills" target="_blank" class="inline-block mt-4 btn-gradient text-white px-6 py-2 rounded-full font-medium text-sm">
-                                Ver Skills
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="resource-card glass-card p-8 rounded-2xl card-hover" data-category="github">
-                    <div class="flex items-start space-x-4 mb-4">
-                        <div class="github-badge text-white px-3 py-1 rounded-full text-sm font-bold flex-shrink-0">
-                            Docs
-                        </div>
-                        <div class="flex-1">
-                            <h3 class="text-xl font-bold text-gray-800 mb-2">Documentación Oficial - docs.molt.bot</h3>
-                            <p class="text-gray-600 mb-4">Documentación oficial completa. Guías de instalación, configuración, referencia de API y más.</p>
-                            <div class="flex items-center space-x-4 text-sm text-gray-500">
-                                <span>📖 Docs completas</span>
-                                <span>🌍 Oficial</span>
-                                <span>✅ Actualizado</span>
-                            </div>
-                            <a href="https://docs.molt.bot/start/getting-started" target="_blank" class="inline-block mt-4 btn-gradient text-white px-6 py-2 rounded-full font-medium text-sm">
-                                Ver Docs
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="resource-card glass-card p-8 rounded-2xl card-hover" data-category="github">
-                    <div class="flex items-start space-x-4 mb-4">
-                        <div class="github-badge text-white px-3 py-1 rounded-full text-sm font-bold flex-shrink-0">
-                            Website
-                        </div>
-                        <div class="flex-1">
-                            <h3 class="text-xl font-bold text-gray-800 mb-2">Sitio Oficial - molt.bot</h3>
-                            <p class="text-gray-600 mb-4">Sitio web oficial de Moltbot. Información principal, características y descargas.</p>
-                            <div class="flex items-center space-x-4 text-sm text-gray-500">
-                                <span>🌐 Oficial</span>
-                                <span>🦞 Moltbot</span>
-                                <span>📱 Principal</span>
-                            </div>
-                            <a href="https://molt.bot/" target="_blank" class="inline-block mt-4 btn-gradient text-white px-6 py-2 rounded-full font-medium text-sm">
-                                Visitar Sitio
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
+    <!-- Resources Grid -->
+    <section class="py-8 px-4 sm:px-6 lg:px-8 pb-20">
+        <div class="max-w-7xl mx-auto">
+            <div id="resourcesContainer" class="grid md:grid-cols-2 gap-6">
+                <!-- Resources will be loaded dynamically here -->
             </div>
-        </div>
-    </section>
 
-    <!-- Contribute CTA -->
-    <section class="py-16 bg-gradient-to-br from-purple-600 via-pink-500 to-red-500 text-white">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-4xl md:text-5xl font-bold mb-6">¿Conoces más recursos?</h2>
-            <p class="text-xl mb-8 opacity-90">Ayuda a crecer la comunidad compartiendo tus videos, blogs o artículos sobre Moltbot</p>
-            <a href="index.html#contacto" class="bg-white text-purple-600 px-10 py-4 rounded-full font-bold hover:bg-gray-100 transition transform hover:scale-105 shadow-xl inline-block text-lg">
-                Compartir Recurso
-            </a>
+            <!-- Empty state -->
+            <div id="emptyState" class="hidden text-center py-16">
+                <div class="glass-card rounded-2xl p-12 max-w-md mx-auto">
+                    <div class="text-6xl mb-4">🔍</div>
+                    <h3 class="text-2xl font-bold text-white mb-2">No se encontraron recursos</h3>
+                    <p class="text-gray-400">Intenta con otros términos de búsqueda</p>
+                </div>
+            </div>
+
+            <!-- Loading state -->
+            <div id="loadingState" class="text-center py-16">
+                <div class="glass-card rounded-2xl p-12 max-w-md mx-auto">
+                    <div class="skeleton h-6 w-3/4 mx-auto mb-4 rounded"></div>
+                    <div class="skeleton h-4 w-1/2 mx-auto rounded"></div>
+                    <p class="text-gray-400 mt-6">Cargando recursos...</p>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer-gradient text-white py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-3 gap-12 mb-12">
-                <div>
-                    <span class="text-3xl font-bold mb-4 block">🦞 Moltbot Hub</span>
-                    <p class="text-gray-400 leading-relaxed">Tu centro definitivo de información sobre Moltbot, el asistente de AI personal open-source.</p>
+    <footer class="py-12 px-4 sm:px-6 lg:px-8 border-t border-white/10">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                <div class="flex items-center space-x-2">
+                    <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center">
+                        <span class="text-white font-bold text-sm">M</span>
+                    </div>
+                    <span class="text-white font-semibold">Moltbot Hub</span>
                 </div>
-                <div>
-                    <h3 class="font-bold mb-4 text-lg">Enlaces</h3>
-                    <ul class="space-y-3">
-                        <li><a href="index.html#que-es" class="text-gray-400 hover:text-white transition">¿Qué es?</a></li>
-                        <li><a href="index.html#caracteristicas" class="text-gray-400 hover:text-white transition">Características</a></li>
-                        <li><a href="recursos.html" class="text-gray-400 hover:text-white transition">Recursos</a></li>
-                        <li><a href="https://github.com/moltbot/moltbot" class="text-gray-400 hover:text-white transition">GitHub Oficial</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="font-bold mb-4 text-lg">Comunidad</h3>
-                    <ul class="space-y-3 text-gray-400">
-                        <li>Discord: Moltbot Community</li>
-                        <li>Reddit: r/singularity</li>
-                        <li>WhatsApp: +52 999 434 9339</li>
-                    </ul>
+                <div class="flex items-center space-x-6">
+                    <a href="https://github.com/moltbot/moltbot" target="_blank" class="link-glow text-sm">GitHub</a>
+                    <a href="https://discord.gg/moltbot" target="_blank" class="link-glow text-sm">Discord</a>
+                    <a href="#" class="link-glow text-sm">Twitter</a>
                 </div>
             </div>
-            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
-                <p>&copy; 2026 Moltbot Hub. Creado con ❤️ para la comunidad de Moltbot.</p>
-                <p class="mt-2">Moltbot™ es una marca registrada de su respectivo dueño. Este es un proyecto de fans no oficial.</p>
-                <p class="mt-2">Desarrollado por <a href="https://socialbusiness.com.mx" target="_blank" class="text-purple-400 hover:text-purple-300 transition font-medium">Social Business</a></p>
+            <div class="mt-8 text-center">
+                <p class="text-gray-400 text-sm">
+                    © 2026 Moltbot Hub. Todos los derechos reservados.
+                </p>
+                <p class="mt-2 text-sm">
+                    Desarrollado por <a href="https://socialbusiness.com.mx" target="_blank" class="text-purple-400 hover:text-purple-300 transition font-medium">Social Business</a>
+                </p>
             </div>
         </div>
     </footer>
 
-    <!-- Cargar data.json y resources.js -->
-    <script src="resources.js"></script>
-    <script>
-        // Smooth scroll para enlaces de navegación
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
+    <script type="module">
+        import { normalizeResource } from './resources.js';
+
+        let allResources = [];
+        let currentFilter = 'all';
+        let searchTerm = '';
+
+        // DOM Elements
+        const container = document.getElementById('resourcesContainer');
+        const searchInput = document.getElementById('searchInput');
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const emptyState = document.getElementById('emptyState');
+        const loadingState = document.getElementById('loadingState');
+
+        // Load resources
+        async function loadResources() {
+            try {
+                const response = await fetch('./data.json');
+                const data = await response.json();
+                
+                // Normalize resources if needed
+                allResources = data.map(resource => normalizeResource ? normalizeResource(resource) : resource);
+                
+                // Update counts
+                updateCounts();
+                
+                // Render resources
+                renderResources();
+                
+                // Hide loading
+                loadingState.classList.add('hidden');
+            } catch (error) {
+                console.error('Error loading resources:', error);
+                loadingState.innerHTML = '<p class="text-red-400">Error al cargar recursos</p>';
+            }
+        }
+
+        // Update counts
+        function updateCounts() {
+            const counts = {
+                total: allResources.length,
+                youtube: allResources.filter(r => r.type === 'youtube').length,
+                blog: allResources.filter(r => r.type === 'blog').length,
+                reddit: allResources.filter(r => r.type === 'reddit').length,
+                github: allResources.filter(r => r.type === 'github').length,
+                docs: allResources.filter(r => r.type === 'docs' || r.type === 'website').length,
+                tweet: allResources.filter(r => r.type === 'tweet').length
+            };
+
+            document.getElementById('totalResources').textContent = counts.total + '+';
+            document.getElementById('youtubeCount').textContent = counts.youtube;
+            document.getElementById('blogCount').textContent = counts.blog;
+            document.getElementById('redditCount').textContent = counts.reddit;
+            document.getElementById('githubCount').textContent = counts.github;
+
+            // Update filter button counts
+            filterBtns.forEach(btn => {
+                const filter = btn.dataset.filter;
+                const count = counts[filter] || 0;
+                btn.textContent = btn.textContent.split('(')[0].trim() + ` (${count})`;
+            });
+        }
+
+        // Render resources
+        function renderResources() {
+            const filtered = allResources.filter(resource => {
+                const matchesFilter = currentFilter === 'all' || resource.type === currentFilter;
+                const matchesSearch = searchTerm === '' || 
+                    resource.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                    (resource.description && resource.description.toLowerCase().includes(searchTerm.toLowerCase())) ||
+                    (resource.author && resource.author.toLowerCase().includes(searchTerm.toLowerCase()));
+                return matchesFilter && matchesSearch;
+            });
+
+            if (filtered.length === 0) {
+                container.innerHTML = '';
+                emptyState.classList.remove('hidden');
+                return;
+            }
+
+            emptyState.classList.add('hidden');
+            container.innerHTML = filtered.map(resource => createResourceCard(resource)).join('');
+        }
+
+        // Create resource card
+        function createResourceCard(resource) {
+            const badgeClass = `badge-${resource.type}`;
+            const badgeEmoji = {
+                youtube: '📺',
+                blog: '📖',
+                reddit: '💬',
+                github: '🐙',
+                docs: '📚',
+                tweet: '🐦',
+                website: '🌐'
+            }[resource.type] || '📄';
+
+            // YouTube video embed
+            let videoEmbed = '';
+            if (resource.type === 'youtube' && resource.videoId) {
+                videoEmbed = `
+                    <lite-youtube videoid="${resource.videoId}" videotitle="${resource.title}" videoplay="Ver Video">
+                        <a class="lite-youtube-fallback" href="${resource.url}" target="_blank">
+                            Ver en YouTube
+                        </a>
+                    </lite-youtube>
+                `;
+            }
+
+            return `
+                <div class="resource-card glass-card rounded-2xl p-6" data-category="${resource.type}">
+                    <div class="flex items-start justify-between mb-4">
+                        <span class="badge ${badgeClass}">${badgeEmoji} ${resource.type.toUpperCase()}</span>
+                        <span class="text-xs text-gray-500">${resource.source || 'manual'}</span>
+                    </div>
+                    
+                    <h3 class="text-lg font-bold text-white mb-3 leading-tight">${resource.title}</h3>
+                    
+                    ${resource.description ? `<p class="text-gray-400 text-sm mb-4 line-clamp-3">${resource.description}</p>` : ''}
+                    
+                    ${resource.author ? `<p class="text-xs text-gray-500 mb-4">Por: ${resource.author}</p>` : ''}
+                    
+                    ${videoEmbed}
+                    
+                    <div class="flex items-center justify-between mt-4 pt-4 border-t border-white/10">
+                        <a href="${resource.url}" target="_blank" class="text-purple-400 hover:text-purple-300 text-sm font-medium transition">
+                            Ver recurso →
+                        </a>
+                        ${resource.date ? `<span class="text-xs text-gray-500">${new Date(resource.date).toLocaleDateString('es-ES')}</span>` : ''}
+                    </div>
+                </div>
+            `;
+        }
+
+        // Event listeners
+        searchInput.addEventListener('input', (e) => {
+            searchTerm = e.target.value;
+            renderResources();
+        });
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                currentFilter = btn.dataset.filter;
+                renderResources();
             });
         });
 
-        // Mobile menu toggle
+        // Mobile menu
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
 
-        if (mobileMenuBtn && mobileMenu) {
-            mobileMenuBtn.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
 
-            // Close mobile menu when clicking on a link
-            const mobileLinks = mobileMenu.querySelectorAll('a');
-            mobileLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    mobileMenu.classList.add('hidden');
-                });
-            });
-        }
+        // Load resources on page load
+        loadResources();
     </script>
-
 </body>
 </html>
