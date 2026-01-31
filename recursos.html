@@ -514,16 +514,19 @@
             try {
                 const response = await fetch('./data.json');
                 const data = await response.json();
-                
+
+                // Extract resources array (handle both formats: {resources: []} or direct array)
+                const resources = data.resources || data;
+
                 // Normalize resources if needed
-                allResources = data.map(resource => normalizeResource ? normalizeResource(resource) : resource);
-                
+                allResources = resources.map(resource => normalizeResource ? normalizeResource(resource) : resource);
+
                 // Update counts
                 updateCounts();
-                
+
                 // Render resources
                 renderResources();
-                
+
                 // Hide loading
                 loadingState.classList.add('hidden');
             } catch (error) {
